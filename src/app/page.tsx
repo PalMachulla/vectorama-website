@@ -75,9 +75,9 @@ function CaseStudies({
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          See how we've revolutionized design processes for leading companies,
-          enabling them to generate brand-consistent SVGs at scale with our
-          AI-powered vector generation platform.
+          See how we&apos;ve revolutionized design processes for leading
+          companies, enabling them to generate brand-consistent SVGs at scale
+          with our AI-powered vector generation platform.
         </p>
       </SectionIntro>
       <Container className="mt-16">

@@ -146,8 +146,8 @@ function TeamMembers() {
       </h2>
       <p className="mt-6 text-base text-neutral-600">
         Ta kontakt med våre navigatører for en skreddersydd reise. Book en
-        gratis "Kapteinens runde" - 30 min demo der vi viser deg nøyaktig
-        hvordan vi gjør din merkevare til en velkjørt maskin.
+        gratis &ldquo;Kapteinens runde&rdquo; - 30 min demo der vi viser deg
+        nøyaktig hvordan vi gjør din merkevare til en velkjørt maskin.
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-8">
