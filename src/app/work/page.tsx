@@ -9,6 +9,7 @@ import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
+import { SectionIntro } from '@/components/SectionIntro'
 import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
@@ -22,71 +23,135 @@ import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import { RootLayout } from '@/components/RootLayout'
 
-function CaseStudies({
-  caseStudies,
-}: {
-  caseStudies: Array<MDXEntry<CaseStudy>>
-}) {
+// Real-world use case examples
+const useCaseExamples = [
+  {
+    id: 'mobile-app-icons',
+    title: 'Mobile App Ikoner',
+    category: 'Digital Interface',
+    year: '2024',
+    logo: logoPhobia,
+    description: 'Konsistente app-ikoner på tvers av iOS og Android',
+    summary: [
+      'Generer komplette ikon-biblioteker som følger både iOS Human Interface Guidelines og Material Design prinsipper.',
+      'Automatisk skalering fra 16x16px til 1024x1024px med perfekt skarphet på alle enheter.',
+      'Konsistent visuell identitet som forsterker merkevaregjenkjennelse i app-stores og på hjemskjermer.',
+    ],
+    metrics: {
+      time_saved: '92%',
+      icons_generated: '500+',
+      platforms: '6+',
+    },
+  },
+  {
+    id: 'presentation-graphics',
+    title: 'PowerPoint Illustrasjoner',
+    category: 'Presentasjoner',
+    year: '2024',
+    logo: logoFamilyFund,
+    description: 'Profesjonelle illustrasjoner for bedriftspresentasjoner',
+    summary: [
+      'Skaper engasjerende datavisualiseringer, prosessdiagrammer og konseptuelle illustrasjoner som forsterker budskapet.',
+      'Tilpasset bedriftens merkevareidentitet med korrekte farger, typografi og visuell stil.',
+      'Optimalisert for både skjermvisning og print, med vektorbasert kvalitet som aldri blir pixelert.',
+    ],
+    metrics: {
+      time_saved: '85%',
+      slides_enhanced: '1200+',
+      presentations: '150+',
+    },
+  },
+  {
+    id: 'print-posters',
+    title: 'Plakat & Print Design',
+    category: 'Print Media',
+    year: '2024',
+    logo: logoUnseal,
+    description: 'Høyoppløselige illustrasjoner for trykte materialer',
+    summary: [
+      'Produserer skalerbare vektorillustrasjoner optimalisert for store format som plakater, bannere og utstillingsmateriell.',
+      'Automatisk fargetilpasning for CMYK-trykk med ICC-profiler for nøyaktig fargereproduksjon.',
+      'Genererer både hovedillustrasjoner og støtteelementer som ikoner, mønstre og dekorative elementer.',
+    ],
+    metrics: {
+      time_saved: '78%',
+      print_ready: '100%',
+      formats: '12+',
+    },
+  },
+]
+
+function UseCaseExamples() {
   return (
     <Container className="mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Showcases
+          Bruksområder på tvers av medier
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
-        {caseStudies.map((caseStudy) => (
-          <FadeIn key={caseStudy.client}>
+        {useCaseExamples.map((useCase) => (
+          <FadeIn key={useCase.id}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
                   <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
                     <Image
-                      src={caseStudy.logo}
+                      src={useCase.logo}
                       alt=""
                       className="h-16 w-16 flex-none"
                       unoptimized
                     />
                     <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
-                      {caseStudy.client}
+                      {useCase.title}
                     </h3>
                   </div>
                   <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
                     <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {caseStudy.service}
+                      {useCase.category}
                     </p>
                     <p className="text-sm text-neutral-950 lg:mt-2">
-                      <time dateTime={caseStudy.date}>
-                        {formatDate(caseStudy.date)}
-                      </time>
+                      <time dateTime={useCase.year}>{useCase.year}</time>
                     </p>
                   </div>
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
-                    <Link href={caseStudy.href}>{caseStudy.title}</Link>
+                    {useCase.description}
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
-                    {caseStudy.summary.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
+                    {useCase.summary.map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
                     ))}
                   </div>
-                  <div className="mt-8 flex">
-                    <Button
-                      href={caseStudy.href}
-                      aria-label={`Les case study: ${caseStudy.client}`}
-                    >
-                      Les case study
-                    </Button>
+
+                  {/* Metrics Section */}
+                  <div className="mt-8 grid grid-cols-3 gap-4 rounded-2xl bg-neutral-50 p-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-neutral-950">
+                        {useCase.metrics.time_saved}
+                      </div>
+                      <div className="text-sm text-neutral-600">
+                        Tidsbesparelse
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-neutral-950">
+                        {Object.values(useCase.metrics)[1]}
+                      </div>
+                      <div className="text-sm text-neutral-600">
+                        {Object.keys(useCase.metrics)[1].replace('_', ' ')}
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-neutral-950">
+                        {Object.values(useCase.metrics)[2]}
+                      </div>
+                      <div className="text-sm text-neutral-600">
+                        {Object.keys(useCase.metrics)[2].replace('_', ' ')}
+                      </div>
+                    </div>
                   </div>
-                  {caseStudy.testimonial && (
-                    <Blockquote
-                      author={caseStudy.testimonial.author}
-                      className="mt-12"
-                    >
-                      {caseStudy.testimonial.content}
-                    </Blockquote>
-                  )}
                 </div>
               </Border>
             </article>
@@ -94,6 +159,63 @@ function CaseStudies({
         ))}
       </div>
     </Container>
+  )
+}
+
+function CaseStudies({
+  caseStudies,
+}: {
+  caseStudies: Array<MDXEntry<CaseStudy>>
+}) {
+  return (
+    <>
+      <SectionIntro title="Kundecaser" className="mt-24 sm:mt-32 lg:mt-40">
+        <p>
+          Se hvordan ledende bedrifter har implementert Vectorama for å
+          automatisere designproduksjon og sikre merkevarekonistens på tvers av
+          alle kanaler.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          {caseStudies.map((caseStudy) => (
+            <FadeIn key={caseStudy.href} className="flex">
+              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+                <h3>
+                  <Link href={caseStudy.href}>
+                    <span className="absolute inset-0 rounded-3xl" />
+                    <Image
+                      src={caseStudy.logo}
+                      alt={caseStudy.client}
+                      className="h-16 w-16"
+                      unoptimized
+                    />
+                  </Link>
+                </h3>
+                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
+                  <time
+                    dateTime={caseStudy.date.split('-')[0]}
+                    className="font-semibold"
+                  >
+                    {caseStudy.date.split('-')[0]}
+                  </time>
+                  <span className="text-neutral-300" aria-hidden="true">
+                    /
+                  </span>
+                  <span>Case study</span>
+                </p>
+                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                  {caseStudy.title}
+                </p>
+                <p className="mt-4 text-base text-neutral-600">
+                  {caseStudy.description}
+                </p>
+              </article>
+            </FadeIn>
+          ))}
+        </FadeInStagger>
+      </Container>
+    </>
   )
 }
 
@@ -143,54 +265,74 @@ function VectoramaShowcase() {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="mb-8 font-display text-2xl font-semibold text-neutral-950">
-          Featured Showcase
+          Telenor Case Study
         </h2>
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
           <div>
             <h3 className="mb-4 font-display text-xl font-semibold text-neutral-950">
-              Telenor: AI-drevne ikonsystemer
+              Komplett designsystem-automatisering
             </h3>
             <p className="mb-6 text-base text-neutral-600">
-              Bistod Telenor med AI-drevne ikonsystemer, illustrasjoner og
-              merkevareautomatisering. Vi produserte skalerbare og redigerbare
-              SVG-er for alle plattformer, noe som resulterte i 80% reduksjon i
-              designtid og perfekt merkevarekonsistens på tvers av alle digitale
-              touchpoints.
+              Implementerte Vectorama for å automatisere produksjon av ikoner,
+              illustrasjoner og designelementer på tvers av alle digitale og
+              trykte kanaler. Resultatet var 85% reduksjon i designtid og
+              perfekt merkevarekonistens fra mobile apper til
+              PowerPoint-presentasjoner og trykte kampanjer.
             </p>
-            <div className="space-y-2 text-sm text-neutral-600">
-              <p>
-                <strong>Utfordring:</strong> Inkonsistente ikoner på tvers av
-                plattformer
-              </p>
-              <p>
-                <strong>Løsning:</strong> AI-systemet lærte Telenors
-                merkevareidentitet
-              </p>
-              <p>
-                <strong>Resultat:</strong> 80% reduksjon i designtid, 100%
-                merkevarekonsistens
-              </p>
+            <div className="space-y-3 text-sm text-neutral-600">
+              <div className="flex justify-between">
+                <span>
+                  <strong>Utfordring:</strong>
+                </span>
+                <span>Inkonsistente designelementer på tvers av kanaler</span>
+              </div>
+              <div className="flex justify-between">
+                <span>
+                  <strong>Løsning:</strong>
+                </span>
+                <span>AI-system trent på Telenors merkevareidentitet</span>
+              </div>
+              <div className="flex justify-between">
+                <span>
+                  <strong>Resultat:</strong>
+                </span>
+                <span>85% tidsbesparelse, 100% merkevarekonistens</span>
+              </div>
             </div>
           </div>
           <div className="rounded-2xl bg-neutral-50 p-8">
-            <div className="text-center">
-              <div className="mb-2 text-4xl font-bold text-neutral-950">
-                80%
+            <div className="grid grid-cols-2 gap-6 text-center">
+              <div>
+                <div className="mb-2 text-3xl font-bold text-neutral-950">
+                  15,000+
+                </div>
+                <div className="text-sm text-neutral-600">
+                  Designelementer generert
+                </div>
               </div>
-              <div className="mb-4 text-sm text-neutral-600">
-                Reduksjon i designtid
+              <div>
+                <div className="mb-2 text-3xl font-bold text-neutral-950">
+                  85%
+                </div>
+                <div className="text-sm text-neutral-600">
+                  Reduksjon i designtid
+                </div>
               </div>
-              <div className="mb-2 text-2xl font-bold text-neutral-950">
-                1000+
+              <div>
+                <div className="mb-2 text-3xl font-bold text-neutral-950">
+                  12
+                </div>
+                <div className="text-sm text-neutral-600">
+                  Ulike medieformat
+                </div>
               </div>
-              <div className="mb-4 text-sm text-neutral-600">
-                Ikoner generert
-              </div>
-              <div className="mb-2 text-2xl font-bold text-neutral-950">
-                100%
-              </div>
-              <div className="text-sm text-neutral-600">
-                Merkevarekonsistens
+              <div>
+                <div className="mb-2 text-3xl font-bold text-neutral-950">
+                  100%
+                </div>
+                <div className="text-sm text-neutral-600">
+                  Merkevarekonistens
+                </div>
               </div>
             </div>
           </div>
@@ -201,9 +343,9 @@ function VectoramaShowcase() {
 }
 
 export const metadata: Metadata = {
-  title: 'Våre Cases',
+  title: 'Bruksområder & Cases',
   description:
-    'Se hvordan vi har transformert designprosesser for ledende selskaper med AI-drevne vektorløsninger.',
+    'Se hvordan Vectorama brukes til alt fra app-ikoner til PowerPoint-illustrasjoner og print-design. Eksempler på AI-drevet designautomatisering.',
 }
 
 export default async function Work() {
@@ -212,16 +354,18 @@ export default async function Work() {
   return (
     <RootLayout>
       <PageIntro
-        eyebrow="Våre cases"
-        title="Transformerte designprosesser for virkelige utfordringer."
+        eyebrow="Bruksområder"
+        title="Fra digitale grensesnitt til trykte materialer"
       >
         <p>
-          Se hvordan vi har revolutjonert designprosesser for ledende selskaper,
-          og la deg inspirere til å bli med i vår portefølje. Vi leverer
-          konsistente, merkevareriktige SVG-er som effektiviserer arbeidsflyten
-          din.
+          Vectorama automatiserer designproduksjon på tvers av alle medier og
+          plattformer. Se hvordan vår AI-teknologi skaper konsistente,
+          merkevareriktige designelementer - fra app-ikoner og web-grafikk til
+          PowerPoint-illustrasjoner og plakat-design.
         </p>
       </PageIntro>
+
+      <UseCaseExamples />
 
       <VectoramaShowcase />
 
@@ -231,9 +375,9 @@ export default async function Work() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Telenor', logo: logoPhobia }}
       >
-        Vi valgte <em>Vectorama</em> fordi vi trengte en skalerbar løsning for
-        våre designutfordringer. De leverte et system som overgikk alle
-        forventninger og ga oss merkevareriktige resultater på sekunder.
+        Vectorama har transformert hele vår designprosess. Fra app-ikoner til
+        presentasjonsgrafikk og trykte kampanjer - alt produseres nå med perfekt
+        merkevarekonistens og på en brøkdel av tiden.
       </Testimonial>
 
       <Clients />
