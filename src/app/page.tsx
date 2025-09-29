@@ -75,9 +75,9 @@ function CaseStudies({
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          See how we&apos;ve revolutionized design processes for leading
-          companies, enabling them to generate brand-consistent SVGs at scale
-          with our AI-powered vector generation platform.
+          Se hvordan vi har revolutjonert designprosesser for ledende selskaper,
+          og gjort det mulig å generere merkevarekonistente designelementer på
+          tvers av alle plattformer og medier.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -127,14 +127,14 @@ function Services() {
   return (
     <>
       <SectionIntro
-        eyebrow="Generativ AI + designerkurering"
-        title="Skalerbar merkevarebygging med AI-drevne vektorløsninger"
+        eyebrow="Generativ AI + designerekspertise"
+        title="Komplett designsystem-automatisering"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Vi transformerer designprosesser ved å kombinere kraftig AI-teknologi
-          med ekspert designerkurering, slik at dere kan produsere konsistente,
-          merkevareriktige SVG-er på sekunder.
+          Vi transformerer designprosesser ved å kombinere avansert AI-teknologi
+          med dypgående forståelse av merkevareidentitet, og skaper komplette
+          designsystemer som skalerer på tvers av alle plattformer.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -149,21 +149,22 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-132 lg:pl-4">
-            <ListItem title="AI-Merkevareanalyse">
-              Vi analyserer deres merkevareidentitet og visuelle elementer for å
-              forstå deres unike stil og skape et skreddersydd AI-system.
+            <ListItem title="Designsystem-analyse">
+              Vi analyserer deres eksisterende designsystem, merkevareidentitet
+              og visuelle retningslinjer for å skape en skreddersydd AI-modell.
             </ListItem>
-            <ListItem title="Automatisert SVG-generering">
-              Produser konsistente, skalerbare ikoner, illustrasjoner og
-              pictogrammer på sekunder - alle perfekt tilpasset deres merkevare.
+            <ListItem title="Komplett elementbibliotek">
+              Generer ikoner, piktogrammer, illustrasjoner og
+              datavisualiseringselementer - alt fra app-ikoner til
+              PowerPoint-illustrasjoner og plakatdesign.
             </ListItem>
-            <ListItem title="Smart organisering">
-              Semantisk navngiving, strukturerte biblioteker og direkte eksport
-              til Figma, Sketch og Adobe for sømløs integrering i arbeidsflyten.
+            <ListItem title="Plattformtilpasning">
+              Automatisk optimalisering for web, mobile apper, print,
+              presentasjoner og sosiale medier med korrekt oppløsning og format.
             </ListItem>
             <ListItem title="Kvalitetssikring">
-              Ekspertdesignere kurerer og finjusterer AI-output for å sikre
-              optimal kvalitet og fullstendig merkevarekonsistens.
+              Ekspertdesignere kurerer og validerer alle AI-genererte elementer
+              for å sikre høyeste kvalitet og merkevareintegritet.
             </ListItem>
           </List>
         </div>
@@ -175,10 +176,11 @@ function Services() {
 function ProcessSteps() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <SectionIntro title="Slik fungerer det" className="mb-16">
+      <SectionIntro title="Vår metodikk" className="mb-16">
         <p>
-          Vi tar deres designelementer og skaper et GenAI-system som genererer
-          SVG-er i henhold til merkevareguiden deres.
+          Vi tar deres designsystem og merkevareidentitet og skaper en
+          AI-løsning som genererer konsistente designelementer på tvers av alle
+          medier og plattformer.
         </p>
       </SectionIntro>
 
@@ -189,11 +191,12 @@ function ProcessSteps() {
               1
             </div>
             <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
-              Last opp designelementer
+              Designsystem-kartlegging
             </h3>
             <p className="mt-4 text-base text-neutral-600">
-              Send oss deres logoer, fargepaletter, typografi og
-              designretningslinjer. Vi støtter alle vanlige formater.
+              Vi kartlegger deres eksisterende designsystem, merkevareidentitet,
+              fargepaletter og typografi for å forstå deres unike visuelle
+              språk.
             </p>
           </div>
         </FadeIn>
@@ -204,11 +207,12 @@ function ProcessSteps() {
               2
             </div>
             <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
-              AI studerer merkevaren
+              AI-modell trening
             </h3>
             <p className="mt-4 text-base text-neutral-600">
-              Våre AI-modeller analyserer deres eksisterende designelementer for
-              å produsere konsistente, on-brand resultater.
+              Vår AI lærer deres spesifikke designprinsipper og
+              merkevareidentitet for å produsere konsistente, merkevareriktige
+              resultater.
             </p>
           </div>
         </FadeIn>
@@ -219,11 +223,11 @@ function ProcessSteps() {
               3
             </div>
             <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
-              Generer & rediger
+              Produksjon & levering
             </h3>
             <p className="mt-4 text-base text-neutral-600">
-              Få uendelig med merkevareriktige SVG-er som er fullt redigerbare,
-              skalerbare og klare for alle plattformer.
+              Generer komplette designelementer optimalisert for alle deres
+              behov - fra digitale grensesnitt til trykte materialer.
             </p>
           </div>
         </FadeIn>
@@ -234,7 +238,7 @@ function ProcessSteps() {
 
 export const metadata: Metadata = {
   description:
-    'Vectorama - AI-powered vector generation platform for consistent brand assets and illustrations. Seil ut med vår GenAI vektorløsning.',
+    'Vectorama - AI-powered designsystem automatisering. Generer merkevarekonistente ikoner, illustrasjoner og designelementer på tvers av alle plattformer.',
 }
 
 export default async function Home() {
@@ -248,16 +252,17 @@ export default async function Home() {
             Vectorama
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Seil ut med vår GenAI vektorløsning. Generer fantastiske
-            illustrasjoner og ikoner øyeblikkelig med AI-drevet
-            merkevarebygging.
+            Automatiser designproduksjon med AI. Generer merkevarekonistente
+            ikoner, illustrasjoner og designelementer som skalerer på tvers av
+            alle plattformer - fra apper og nettsider til presentasjoner og
+            trykte materialer.
           </p>
           <div className="mt-8">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-lg bg-neutral-950 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-neutral-800"
             >
-              Sett seil
+              Kom i gang
             </Link>
           </div>
         </FadeIn>
@@ -273,9 +278,9 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Telenor', logo: logoPhobiaDark }}
       >
-        Vectorama har revolutionert vår designprosess. Vi kan nå produsere
-        konsistente, merkevareriktige ikoner og illustrasjoner på en brøkdel av
-        tiden det tok tidligere.
+        Vectorama har transformert vår designprosess. Vi kan nå produsere
+        konsistente, merkevareriktige designelementer på en brøkdel av tiden det
+        tok tidligere, alt fra app-ikoner til presentasjonsgrafikk.
       </Testimonial>
 
       <Services />

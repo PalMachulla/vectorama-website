@@ -120,7 +120,8 @@ function TeamMembers() {
       role: 'Client Manager',
       email: 'thale.hamo@merkle.com',
       phone: '+47 988 61 118',
-      description: '15 år med å seile gjennom komplekse merkevareprosjekter',
+      description:
+        '15 års erfaring med komplekse merkevareprosjekter og designautomatisering',
     },
     {
       name: 'Benedicte Kjøde',
@@ -132,22 +133,22 @@ function TeamMembers() {
     },
     {
       name: 'Pål Machulla',
-      role: 'AI lead / Director of innovation',
+      role: 'AI Lead / Director of Innovation',
       email: 'pal@vectorama.no',
       phone: '+47 123 45 678',
-      description: 'Vurderer og bistår med AI-løsninger for klienter',
+      description: 'Spesialist på AI-løsninger og designsystem-automatisering',
     },
   ]
 
   return (
     <FadeIn>
       <h2 className="font-display text-base font-semibold text-neutral-950">
-        Klar for boarding?
+        Ta kontakt med teamet
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Ta kontakt med våre navigatører for en skreddersydd reise. Book en
-        gratis &ldquo;Kapteinens runde&rdquo; - 30 min demo der vi viser deg
-        nøyaktig hvordan vi gjør din merkevare til en velkjørt maskin.
+        Våre eksperter hjelper deg med å implementere AI-drevet
+        designautomatisering i din organisasjon. Book en gratis konsultasjon for
+        å se hvordan Vectorama kan transformere deres designprosesser.
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-8">
@@ -196,7 +197,7 @@ function TeamMembers() {
 export const metadata: Metadata = {
   title: 'Kontakt Oss',
   description:
-    'Ta kontakt med Vectorama teamet. Vi kan ikke vente på å høre fra deg.',
+    'Ta kontakt med Vectorama teamet for en gratis konsultasjon om AI-drevet designautomatisering.',
 }
 
 export default function Contact() {
@@ -204,8 +205,9 @@ export default function Contact() {
     <RootLayout>
       <PageIntro eyebrow="Kontakt oss" title="La oss samarbeide">
         <p>
-          Vi kan ikke vente på å høre fra deg. Book en gratis demo eller send
-          oss en melding om ditt prosjekt.
+          Klar for å automatisere designproduksjonen? Kontakt våre eksperter for
+          en gratis konsultasjon og se hvordan Vectorama kan transformere deres
+          designprosesser med AI-teknologi.
         </p>
       </PageIntro>
 

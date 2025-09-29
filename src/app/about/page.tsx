@@ -30,29 +30,30 @@ function VectoramaValues() {
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
         eyebrow="Våre verdier"
-        title="Innovasjon møter merkevareekspertise"
+        title="Teknologi møter designekspertise"
         invert
       >
         <p>
-          Vi kombinerer banebrytende AI-teknologi med dypgående forståelse av
-          merkevareidentitet for å skape løsninger som revolusjonerer
-          designprosesser.
+          Vi kombinerer avansert AI-teknologi med dypgående forståelse av
+          merkevareidentitet og designprinsipper for å skape løsninger som
+          transformerer designprosesser.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
           <GridListItem title="Innovasjon" invert>
             Vi utforsker kontinuerlig nye muligheter innen AI og maskinlæring
-            for å forbedre designautomatisering og merkevarebygging.
+            for å forbedre designautomatisering og merkevarebygging på tvers av
+            alle medier.
           </GridListItem>
           <GridListItem title="Merkevareintegritet" invert>
-            Hver SVG vi genererer respekterer og forsterker din
-            merkevareidentitet, og sikrer konsistens på tvers av alle
-            plattformer.
+            Hvert designelement vi genererer respekterer og forsterker din
+            merkevareidentitet, og sikrer konsistens fra app-ikoner til
+            presentasjonsgrafikk.
           </GridListItem>
           <GridListItem title="Kvalitet" invert>
             Våre AI-modeller er trent til å produsere design i verdensklasse,
-            med menneskelig kurering som sikrer perfektion i hvert element.
+            med ekspertvalidering som sikrer perfektion i hvert element.
           </GridListItem>
         </GridList>
       </Container>
@@ -68,7 +69,8 @@ const team = [
         name: 'Pål Machulla',
         role: 'AI Lead / Director of Innovation',
         image: { src: imageLeslieAlexander },
-        description: 'Vurderer og bistår med AI-løsninger for klienter',
+        description:
+          'Spesialist på AI-løsninger og designsystem-automatisering',
       },
       {
         name: 'Benedicte Kjøde',
@@ -81,18 +83,20 @@ const team = [
         name: 'Thale Håmo',
         role: 'Client Manager',
         image: { src: imageDriesVincent },
-        description: '15 år med å seile gjennom komplekse merkevareprosjekter',
+        description:
+          '15 års erfaring med komplekse merkevareprosjekter og designautomatisering',
       },
     ],
   },
   {
-    title: 'Mannskapet',
+    title: 'Ekspertteam',
     people: [
       {
         name: 'Kim Oliver H. Andersson',
         role: 'AI Solutions Architect',
         image: { src: imageChelseaHagon },
-        description: 'Designer og implementerer AI-løsninger for klienter',
+        description:
+          'Designer og implementerer AI-løsninger for designautomatisering',
       },
       {
         name: 'Alam Ali',
@@ -116,10 +120,10 @@ const team = [
       },
       {
         name: 'Vector Specialist',
-        role: 'SVG Optimization Expert',
+        role: 'Designsystem Expert',
         image: { src: imageKathrynMurphy },
         description:
-          'Optimaliserer SVG-output for perfekt skalerbarhet og kvalitet',
+          'Optimaliserer designelementer for perfekt skalerbarhet og kvalitet',
       },
       {
         name: 'Brand Analyst',
@@ -192,7 +196,7 @@ export default async function About() {
 
   return (
     <RootLayout>
-      <PageIntro eyebrow="Om oss" title="AI-powered merkevareautomatisering">
+      <PageIntro eyebrow="Om oss" title="AI-drevet designsystem-automatisering">
         <p>
           Vi revolusjonerer designbransjen ved å kombinere banebrytende
           AI-teknologi med dypgående forståelse av merkevareidentitet og visuell
@@ -202,24 +206,25 @@ export default async function About() {
           <p>
             Vectorama ble grunnlagt av et team av designere, teknologer og
             merkevareeksperter som så behovet for en mer effektiv måte å
-            produsere konsistente, høykvalitets vektorgrafikk på. Vi oppdaget at
-            tradisjonelle designprosesser var for tidkrevende og inkonsistente
-            for moderne merkevarer som trengte å skalere raskt.
+            produsere konsistente, høykvalitets designelementer på. Vi oppdaget
+            at tradisjonelle designprosesser var for tidkrevende og
+            inkonsistente for moderne merkevarer som trengte å skalere raskt på
+            tvers av alle medier.
           </p>
           <p>
             I dag hjelper vi ledende selskaper som Telenor med å automatisere
             designproduksjon uten å kompromittere på kvalitet eller
-            merkevareintegritet. Vårt AI-system lærer din unike visuelle
-            identitet og produserer SVG-er som føles håndlaget av ditt eget
-            designteam.
+            merkevareintegritet. Vårt AI-system lærer din unike designidentitet
+            og produserer alt fra app-ikoner til presentasjonsgrafikk som føles
+            håndlaget av ditt eget designteam.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="1000+" label="SVG-er generert" />
-          <StatListItem value="80%" label="Reduksjon i designtid" />
-          <StatListItem value="15+" label="Merkevarer transformert" />
+          <StatListItem value="10,000+" label="Designelementer generert" />
+          <StatListItem value="85%" label="Reduksjon i designtid" />
+          <StatListItem value="25+" label="Merkevarer transformert" />
         </StatList>
       </Container>
 
