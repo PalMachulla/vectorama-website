@@ -134,9 +134,9 @@ function TeamMembers() {
     {
       name: 'Pål Machulla',
       role: 'AI Lead / Director of Innovation',
-      email: 'pal@vectorama.no',
-      phone: '+47 123 45 678',
-      description: 'Spesialist på AI-løsninger og designsystem-automatisering',
+      email: 'pal.machulla@merkle.com',
+      phone: '+47 926 58 947',
+      description: 'Spesialist på AI-løsninger og system-automatisering',
     },
   ]
 

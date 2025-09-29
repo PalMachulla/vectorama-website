@@ -19,6 +19,7 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
+import imageCopymachine from '@/images/copymachine.png'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import { RootLayout } from '@/components/RootLayout'
 
@@ -36,27 +37,38 @@ const clients = [
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div
+      className="copymachine-bg mx-0 mt-24 bg-neutral-200 py-20 sm:mt-32 sm:py-32 lg:mx-0 lg:mt-32"
+      style={
+        {
+          '--bg-image': `linear-gradient(to right, #e5e5e5 0%, #e5e5e5 50%, transparent 50%), url(${imageCopymachine.src})`,
+          backgroundRepeat: 'no-repeat, no-repeat',
+          backgroundPosition: 'left center, right center',
+          backgroundSize: '100% 100%, auto 100%',
+        } as React.CSSProperties & { '--bg-image': string }
+      }
+    >
       <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            Trusted by leading brands and innovative companies
-          </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
-        </FadeIn>
         <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
-                <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
+          <div className="flex flex-col items-start">
+            {/* Content */}
+            <div className="flex w-full flex-col lg:w-1/2">
+              <FadeIn>
+                <h2 className="mr-10 font-display text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
+                  Hvordan ser en kopimaskin ut i 2025?
+                </h2>
+              </FadeIn>
+              <FadeIn>
+                <p className="mt-6 mr-10 text-lg text-neutral-600">
+                  Dette spørsmålet ønsket vi å utfordre. Nå som vi ikke lenger
+                  er bundet til å kopiere, men faktisk generere. Med andre ord,
+                  kan vi generere noe som er verdt å kopiere? Kan vi få god nok
+                  kvalitet slik at vi genererer helt "on-brand"? Og kan det
+                  automatiseres?
+                </p>
+              </FadeIn>
+            </div>
+          </div>
         </FadeInStagger>
       </Container>
     </div>
@@ -175,10 +187,10 @@ function Services() {
 
 function ProcessSteps() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
+    <Container className="mt-24 sm:mt-32 lg:mt-32">
       <SectionIntro title="Vår metodikk" className="mb-16">
         <p>
-          Vi tar deres designsystem og merkevareidentitet og skaper en
+          Ut i fra deres designsystem og deres merkevareidentitet skaper vi en
           AI-løsning som genererer konsistente designelementer på tvers av alle
           medier og plattformer.
         </p>

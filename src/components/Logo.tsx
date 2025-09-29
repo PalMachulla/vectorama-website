@@ -37,7 +37,7 @@ export function Logo({
 }) {
   return (
     <svg
-      viewBox="0 0 280 60"
+      viewBox="0 0 480 60"
       aria-hidden="true"
       className={clsx(fillOnHover && 'group/logo', className)}
       {...props}
@@ -59,11 +59,11 @@ export function Logo({
           x="75"
           y="35"
           className={clsx(
-            'font-display text-3xl font-bold tracking-tight',
+            'font-display text-6xl font-bold tracking-tight',
             invert ? 'fill-white' : 'fill-neutral-950',
           )}
           dominantBaseline="middle"
-          fontSize="24"
+          fontSize="64"
         >
           Vectorama
         </text>
