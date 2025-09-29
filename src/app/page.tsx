@@ -63,8 +63,8 @@ function Clients() {
                   Dette spørsmålet ønsket vi å utfordre. Nå som vi ikke lenger
                   er bundet til å kopiere, men faktisk generere. Med andre ord,
                   kan vi generere noe som er verdt å kopiere? Kan vi få god nok
-                  kvalitet slik at vi genererer helt "on-brand"? Og kan det
-                  automatiseres?
+                  kvalitet slik at vi genererer helt &ldquo;on-brand&rdquo;? Og
+                  kan det automatiseres?
                 </p>
               </FadeIn>
             </div>
