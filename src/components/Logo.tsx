@@ -65,7 +65,7 @@ export function Logo({
           dominantBaseline="middle"
           fontSize="64"
         >
-          Vectorama
+          TEKETAMOTUA
         </text>
       </g>
     </svg>

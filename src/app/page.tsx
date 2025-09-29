@@ -83,13 +83,13 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-        title="Showcases: Transforming brand design workflows"
+        title="Hva vi kan hjelpe til med når det kommer til automasjon"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Se hvordan vi har revolutjonert designprosesser for ledende selskaper,
-          og gjort det mulig å generere merkevarekonistente designelementer på
-          tvers av alle plattformer og medier.
+          Automasjon kan være så langt. Fra enkle flows til mer avanserte
+          agent-oppsett. Vi hjelper deg med små eller store prosjekter som
+          passer til ditt behov og din bedrift..
         </p>
       </SectionIntro>
       <Container className="mt-16">
