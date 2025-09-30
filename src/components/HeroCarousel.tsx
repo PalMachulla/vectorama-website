@@ -3,7 +3,9 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FadeIn } from './FadeIn'
+import imageLaptop from '@/images/laptop.jpg'
 
 const slides = [
   {
@@ -18,7 +20,7 @@ const slides = [
     id: 'n8n',
     title: 'N8N Automasjon',
     description:
-      'Automatiser arbeidsflyten din med kraftige integrasjoner. Vi bygger skreddersydde automatiseringsløsninger som forbinder deres systemer, sparer tid og reduserer manuelle oppgaver.',
+      'Automatiser arbeidsflyten din med kraftige integrasjoner. Vi bygger skreddersydde automatiseringsl&oslash;sninger som forbinder deres systemer, sparer tid og reduserer manuelle oppgaver.',
     ctaText: 'Utforsk automasjon',
     ctaHref: '/contact',
   },
@@ -26,9 +28,18 @@ const slides = [
     id: 'lora',
     title: 'Fintuning',
     description:
-      'Tren diffusjonsmodeller på deres egne designelementer. Med LoRa-teknologi skaper vi spesialiserte modeller som genererer perfekt merkevarekonistente assets tilpasset deres unike visuelle identitet.',
-    ctaText: 'Lær mer',
+      'Tren diffusjonsmodeller p&aring; deres egne designelementer. Med LoRa-teknologi skaper vi spesialiserte modeller som genererer perfekt merkevarekonistente assets tilpasset deres unike visuelle identitet.',
+    ctaText: 'L&aelig;r mer',
     ctaHref: '/contact',
+  },
+  {
+    id: 'ai-workflow',
+    title: 'KI-drevet arbeidsflyt',
+    description:
+      'Fra ide til ferdig produkt - v&aring;re KI-l&oslash;sninger str&oslash;mlinjeformer hele designprosessen. Spar tid, oppretthold kvalitet, og skaler effektivt.',
+    ctaText: 'Se hvordan',
+    ctaHref: '/contact',
+    backgroundImage: imageLaptop,
   },
 ]
 
@@ -75,9 +86,12 @@ export function HeroCarousel() {
     })
   }
 
+  const currentSlide = slides[currentIndex]
+  const hasBackground = currentSlide.backgroundImage
+
   return (
     <div className="relative max-w-3xl">
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden rounded-3xl">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={currentIndex}
@@ -102,21 +116,63 @@ export function HeroCarousel() {
                 paginate(-1)
               }
             }}
-            className="cursor-grab active:cursor-grabbing"
+            className={`relative cursor-grab active:cursor-grabbing ${
+              hasBackground ? 'min-h-[500px] sm:min-h-[600px]' : ''
+            }`}
           >
-            <h1 className="font-display text-5xl font-medium tracking-tight text-balance text-neutral-950 sm:text-7xl">
-              {slides[currentIndex].title}
-            </h1>
-            <p className="mt-6 text-xl text-neutral-600">
-              {slides[currentIndex].description}
-            </p>
-            <div className="mt-8">
-              <Link
-                href={slides[currentIndex].ctaHref}
-                className="inline-flex items-center justify-center rounded-lg bg-neutral-950 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-neutral-800"
-              >
-                {slides[currentIndex].ctaText}
-              </Link>
+            {/* Background Image (if present) */}
+            {hasBackground && (
+              <>
+                <div className="absolute inset-0 -z-10">
+                  <Image
+                    src={currentSlide.backgroundImage}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                {/* Gradient overlay for text readability */}
+                <div className="absolute inset-0 -z-5 bg-gradient-to-r from-neutral-950/90 via-neutral-950/70 to-neutral-950/40" />
+              </>
+            )}
+
+            {/* Content */}
+            <div
+              className={`relative ${
+                hasBackground
+                  ? 'flex min-h-[500px] items-center py-16 sm:min-h-[600px] sm:py-20'
+                  : ''
+              }`}
+            >
+              <div className={hasBackground ? 'max-w-2xl' : ''}>
+                <h1
+                  className={`font-display text-5xl font-medium tracking-tight text-balance sm:text-7xl ${
+                    hasBackground ? 'text-white' : 'text-neutral-950'
+                  }`}
+                >
+                  {currentSlide.title}
+                </h1>
+                <p
+                  className={`mt-6 text-xl ${
+                    hasBackground ? 'text-neutral-200' : 'text-neutral-600'
+                  }`}
+                >
+                  {currentSlide.description}
+                </p>
+                <div className="mt-8">
+                  <Link
+                    href={currentSlide.ctaHref}
+                    className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-colors ${
+                      hasBackground
+                        ? 'bg-white text-neutral-950 hover:bg-neutral-100'
+                        : 'bg-neutral-950 text-white hover:bg-neutral-800'
+                    }`}
+                  >
+                    {currentSlide.ctaText}
+                  </Link>
+                </div>
+              </div>
             </div>
           </motion.div>
         </AnimatePresence>
