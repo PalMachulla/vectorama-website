@@ -82,7 +82,38 @@ export function HeroCarousel() {
   const hasBackground = currentSlide?.backgroundImage
 
   return (
-    <div className="relative max-w-3xl">
+    <div className="relative">
+      {/* Background Image (if present) - fades in independently - OUTSIDE overflow-hidden */}
+      <AnimatePresence mode="wait">
+        {hasBackground && (
+          <motion.div
+            key={`bg-${currentIndex}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            className="pointer-events-none absolute -z-10"
+            style={{
+              top: 0,
+              bottom: 0,
+              left: '50%',
+              width: '100vw',
+              transform: 'translateX(-50%)',
+            }}
+          >
+            <Image
+              src={currentSlide.backgroundImage}
+              alt=""
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Gradient overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/90 via-neutral-950/70 to-neutral-950/40" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="relative overflow-hidden rounded-3xl">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
@@ -110,37 +141,6 @@ export function HeroCarousel() {
             }}
             className="relative min-h-[500px] cursor-grab active:cursor-grabbing sm:min-h-[600px]"
           >
-            {/* Background Image (if present) - fades in independently */}
-            <AnimatePresence mode="wait">
-              {hasBackground && (
-                <motion.div
-                  key={`bg-${currentIndex}`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8, ease: 'easeInOut' }}
-                  className="pointer-events-none absolute -z-10"
-                  style={{
-                    top: 0,
-                    bottom: 0,
-                    left: '50%',
-                    width: '100vw',
-                    transform: 'translateX(-50%)',
-                  }}
-                >
-                  <Image
-                    src={currentSlide.backgroundImage}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                  {/* Gradient overlay for text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/90 via-neutral-950/70 to-neutral-950/40" />
-                </motion.div>
-              )}
-            </AnimatePresence>
-
             {/* Content */}
             <div className="relative flex min-h-[500px] items-center py-16 sm:min-h-[600px] sm:py-20">
               <div>
