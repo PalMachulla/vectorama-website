@@ -25,19 +25,11 @@ const slides = [
     ctaHref: '/contact',
   },
   {
-    id: 'lora',
-    title: 'Fintuning',
+    id: 'creative-automation',
+    title: 'Kreativ automasjon',
     description:
-      'Tren diffusjonsmodeller på deres egne designelementer. Med LoRa-teknologi skaper vi spesialiserte modeller som genererer perfekt merkevarekonistente assets tilpasset deres unike visuelle identitet.',
-    ctaText: 'Lær mer',
-    ctaHref: '/contact',
-  },
-  {
-    id: 'ai-workflow',
-    title: 'KI-drevet arbeidsflyt',
-    description:
-      'Fra ide til ferdig produkt - våre KI-løsninger strømlinjeformer hele designprosessen. Spar tid, oppretthold kvalitet, og skaler effektivt.',
-    ctaText: 'Se hvordan',
+      'Utnytt kraften av KI til å automatisere kreative prosesser. Fra idégenerering til ferdig design - vi hjelper deg å skalere kreativiteten uten å miste den menneskelige touchen.',
+    ctaText: 'Se mulighetene',
     ctaHref: '/contact',
     backgroundImage: imageLaptop,
   },
@@ -90,14 +82,8 @@ export function HeroCarousel() {
   const hasBackground = currentSlide.backgroundImage
 
   return (
-    <div
-      className={
-        hasBackground ? 'relative -mx-6 lg:-mx-8' : 'relative max-w-3xl'
-      }
-    >
-      <div
-        className={`relative overflow-hidden ${hasBackground ? 'rounded-none sm:rounded-3xl' : 'rounded-3xl'}`}
-      >
+    <div className="relative max-w-3xl">
+      <div className="relative overflow-hidden rounded-3xl">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={currentIndex}
@@ -124,10 +110,17 @@ export function HeroCarousel() {
             }}
             className="relative min-h-[500px] cursor-grab active:cursor-grabbing sm:min-h-[600px]"
           >
-            {/* Background Image (if present) */}
-            {hasBackground && (
-              <>
-                <div className="absolute inset-0 -z-10">
+            {/* Background Image (if present) - fades in independently */}
+            <AnimatePresence mode="wait">
+              {hasBackground && (
+                <motion.div
+                  key={`bg-${currentIndex}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8, ease: 'easeInOut' }}
+                  className="absolute inset-0 -z-10"
+                >
                   <Image
                     src={currentSlide.backgroundImage}
                     alt=""
@@ -135,19 +128,15 @@ export function HeroCarousel() {
                     className="object-cover"
                     priority
                   />
-                </div>
-                {/* Gradient overlay for text readability */}
-                <div className="absolute inset-0 -z-5 bg-gradient-to-r from-neutral-950/90 via-neutral-950/70 to-neutral-950/40" />
-              </>
-            )}
+                  {/* Gradient overlay for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/90 via-neutral-950/70 to-neutral-950/40" />
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             {/* Content */}
-            <div
-              className={`relative flex min-h-[500px] items-center py-16 sm:min-h-[600px] sm:py-20 ${
-                hasBackground ? 'mx-auto max-w-7xl px-6 lg:px-8' : ''
-              }`}
-            >
-              <div className={hasBackground ? 'max-w-2xl' : ''}>
+            <div className="relative flex min-h-[500px] items-center py-16 sm:min-h-[600px] sm:py-20">
+              <div>
                 <h1
                   className={`font-display text-5xl font-medium tracking-tight text-balance sm:text-7xl ${
                     hasBackground ? 'text-white' : 'text-neutral-950'
