@@ -119,13 +119,13 @@ export function HeroCarousel() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.8, ease: 'easeInOut' }}
-                  className="absolute inset-y-0 -z-10"
+                  className="pointer-events-none absolute -z-10"
                   style={{
+                    top: 0,
+                    bottom: 0,
                     left: '50%',
-                    right: '50%',
-                    marginLeft: '-50vw',
-                    marginRight: '-50vw',
                     width: '100vw',
+                    transform: 'translateX(-50%)',
                   }}
                 >
                   <Image

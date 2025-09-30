@@ -270,9 +270,11 @@ export default async function Home() {
 
   return (
     <RootLayout>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <HeroCarousel />
-      </Container>
+      <div className="mt-24 sm:mt-32 md:mt-56">
+        <Container>
+          <HeroCarousel />
+        </Container>
+      </div>
 
       <Clients />
 
