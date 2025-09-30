@@ -102,35 +102,37 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Bygge" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
+          Basert p&aring; oppdagelsefasen utvikler vi en omfattende{' '}
+          <strong className="font-semibold text-neutral-950">
+            kj&oslash;replan
+          </strong>{' '}
+          for prosjektet og starter arbeidet mot leveranse. Vi velger de beste
+          KI-modellene og teknologiene som passer deres spesifikke behov.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
+          Hver kunde f&aring;r tildelt en dedikert prosjektleder som holder
+          kommunikasjonslinjene &aring;pne og sikrer at prosjektet holder
+          kursen. De fungerer som et bindeledd mellom deres team og v&aring;re
+          KI-spesialister som jobber med &aring; utvikle skreddersydde
+          l&oslash;sninger.
         </p>
         <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          Vi jobber iterativt med regelmessige oppdateringer og demonstrasjoner,
+          slik at dere hele tiden er involvert i utviklingen. Dette sikrer at
+          sluttresultatet matcher forventningene og leverer reell verdi til
+          deres virksomhet.
         </p>
       </div>
 
       <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
+        author={{ name: 'Thomas Hansen', role: 'CTO hos TechCorp' }}
         className="mt-12"
       >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
+        Teamet holdt oss oppdatert gjennom hele prosessen. Vi f&oslash;lte oss
+        trygge p&aring; at prosjektet var i gode hender.
       </Blockquote>
     </Section>
   )
@@ -138,52 +140,55 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Levere" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
+          N&aring;r l&oslash;sningen er klar, gjennomf&oslash;rer vi grundig{' '}
           <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
+            testing og validering
+          </strong>{' '}
+          for &aring; sikre at alt fungerer optimalt. Vi setter opp
+          n&oslash;dvendig infrastruktur og s&oslash;rger for at systemene er
+          klare for produksjon.
         </p>
         <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on social media.
+          Implementeringen skjer p&aring; en kontrollert m&aring;te, ofte i{' '}
+          <strong className="font-semibold text-neutral-950">faser</strong> for
+          &aring; minimere risiko. Vi overv&aring;ker n&oslash;ye ytelsen og
+          justerer underveis for &aring; sikre best mulig{' '}
+          <strong className="font-semibold text-neutral-950">resultat</strong>.
         </p>
         <p>
-          We ensure that the main pages of the site are{' '}
+          Vi s&oslash;rger for at alle n&oslash;kkelkomponenter er{' '}
           <strong className="font-semibold text-neutral-950">
-            fully functional
+            fullt funksjonelle
           </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
+          ved lansering. I tillegg gir vi oppl&aelig;ring til deres team slik at
+          de kan ta i bruk l&oslash;sningen effektivt, med v&aring;r{' '}
           <strong className="font-semibold text-neutral-950">
-            maintenance
+            st&oslash;tte
           </strong>{' '}
-          retainer.
+          tilgjengelig for videre optimalisering.
         </p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
+        Inkludert i denne fasen
       </h3>
       <List className="mt-8">
         <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
+          Grundig testing av alle komponenter for &aring; sikre kvalitet og
+          p&aring;litelighet. Vi validerer at KI-modellene presterer som
+          forventet i reelle scenarioer.
         </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
+        <ListItem title="Infrastruktur">
+          Vi setter opp robust infrastruktur tilpasset deres behov, enten det er
+          sky-baserte l&oslash;sninger eller on-premise systemer.
         </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
+        <ListItem title="St&oslash;tte">
+          Kontinuerlig st&oslash;tte og vedlikehold sikrer at l&oslash;sningen
+          fortsetter &aring; levere verdi over tid. Vi hjelper med oppdateringer
+          og forbedringer etter hvert som deres behov utvikler seg.
         </ListItem>
       </List>
     </Section>
@@ -201,43 +206,50 @@ function Values() {
       </div>
 
       <SectionIntro
-        eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        eyebrow="V&aring;re verdier"
+        title="Balansere p&aring;litelighet og innovasjon"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          Vi str&aring;ber etter &aring; v&aelig;re i forkant av nye trender og
+          teknologier innen KI og automatisering. Vi kombinerer bepr&oslash;vde
+          metoder med nytenkning for &aring; levere l&oslash;sninger som
+          b&aring;de er robuste og nyskapende. V&aring;re kjerneverdier styrer
+          alle v&aring;re beslutninger.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+          <GridListItem title="N&oslash;yaktig">
+            Vi er detaljorienterte i v&aring;r tiln&aelig;rming til
+            KI-utvikling. Hver l&oslash;sning tilpasses n&oslash;ye deres
+            merkevare og behov, fra fargepalett til designprinsipper.
           </GridListItem>
-          <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+          <GridListItem title="Effektiv">
+            Vi er stolte av &aring; levere i tide ved &aring; bruke smarte
+            verkt&oslash;y og metodikk. Erfaring gj&oslash;r oss i stand til
+            &aring; jobbe raskt uten &aring; g&aring; p&aring; kompromiss med
+            kvalitet.
           </GridListItem>
-          <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+          <GridListItem title="Tilpasningsdyktig">
+            Hver virksomhet har unike behov, og v&aring;r st&oslash;rste styrke
+            er evnen til &aring; skreddерsy l&oslash;sninger som passer perfekt
+            til deres spesifikke situasjon.
           </GridListItem>
-          <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+          <GridListItem title="&Aring;pen">
+            Vi er transparente om v&aring;re prosesser og kommuniserer klart
+            gjennom hele prosjektet. Dere vil alltid vite hvor vi st&aring;r og
+            hva som skjer.
           </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+          <GridListItem title="Lojal">
+            Vi bygger langsiktige relasjoner med v&aring;re kunder som g&aring;r
+            utover bare &aring; levere et produkt. Vi er her for &aring;
+            st&oslash;tte dere p&aring; lang sikt.
           </GridListItem>
-          <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+          <GridListItem title="Innovativ">
+            Det teknologiske landskapet utvikler seg konstant, og det
+            gj&oslash;r vi ogs&aring;. Vi holder oss oppdatert p&aring; de
+            nyeste fremskrittene innen KI og automatisering.
           </GridListItem>
         </GridList>
       </Container>
@@ -246,19 +258,20 @@ function Values() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Process',
+  title: 'V&aring;r prosess',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Vi tror p&aring; effektivitet og &aring; maksimere v&aring;re ressurser for &aring; gi best mulig verdi til v&aring;re kunder.',
 }
 
 export default function Process() {
   return (
     <RootLayout>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="V&aring;r prosess" title="Hvordan vi jobber">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          Vi tror p&aring; effektivitet og &aring; maksimere v&aring;re
+          ressurser for &aring; gi best mulig verdi til v&aring;re kunder. Vi
+          kombinerer bepr&oslash;vd metodikk med skreddersydde
+          KI-l&oslash;sninger tilpasset deres unike behov.
         </p>
       </PageIntro>
 
