@@ -92,9 +92,7 @@ export function HeroCarousel() {
   return (
     <div
       className={
-        hasBackground
-          ? 'relative -mx-6 sm:-mx-12 lg:-mx-20'
-          : 'relative max-w-3xl'
+        hasBackground ? 'relative -mx-6 lg:-mx-8' : 'relative max-w-3xl'
       }
     >
       <div
@@ -146,7 +144,7 @@ export function HeroCarousel() {
             {/* Content */}
             <div
               className={`relative flex min-h-[500px] items-center py-16 sm:min-h-[600px] sm:py-20 ${
-                hasBackground ? 'mx-auto max-w-7xl px-6 sm:px-12 lg:px-20' : ''
+                hasBackground ? 'mx-auto max-w-7xl px-6 lg:px-8' : ''
               }`}
             >
               <div className={hasBackground ? 'max-w-2xl' : ''}>
