@@ -198,56 +198,6 @@ export function HeroCarousel() {
           />
         ))}
       </div>
-
-      {/* Navigation arrows - hidden on mobile */}
-      <div className="mt-6 hidden items-center gap-4 sm:flex">
-        <button
-          onClick={() => paginate(-1)}
-          className={`flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
-            hasBackground
-              ? 'border-white/30 text-white hover:border-white hover:bg-white/10'
-              : 'border-neutral-300 text-neutral-950 hover:border-neutral-950 hover:bg-neutral-50'
-          }`}
-          aria-label="Previous slide"
-        >
-          <svg
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-        <button
-          onClick={() => paginate(1)}
-          className={`flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
-            hasBackground
-              ? 'border-white/30 text-white hover:border-white hover:bg-white/10'
-              : 'border-neutral-300 text-neutral-950 hover:border-neutral-950 hover:bg-neutral-50'
-          }`}
-          aria-label="Next slide"
-        >
-          <svg
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
-      </div>
     </div>
   )
 }
