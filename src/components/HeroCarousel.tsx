@@ -20,7 +20,7 @@ const slides = [
     id: 'n8n',
     title: 'N8N Automasjon',
     description:
-      'Automatiser arbeidsflyten din med kraftige integrasjoner. Vi bygger skreddersydde automatiseringsl&oslash;sninger som forbinder deres systemer, sparer tid og reduserer manuelle oppgaver.',
+      'Automatiser arbeidsflyten din med kraftige integrasjoner. Vi bygger skreddersydde automatiseringsløsninger som forbinder deres systemer, sparer tid og reduserer manuelle oppgaver.',
     ctaText: 'Utforsk automasjon',
     ctaHref: '/contact',
   },
@@ -28,15 +28,15 @@ const slides = [
     id: 'lora',
     title: 'Fintuning',
     description:
-      'Tren diffusjonsmodeller p&aring; deres egne designelementer. Med LoRa-teknologi skaper vi spesialiserte modeller som genererer perfekt merkevarekonistente assets tilpasset deres unike visuelle identitet.',
-    ctaText: 'L&aelig;r mer',
+      'Tren diffusjonsmodeller på deres egne designelementer. Med LoRa-teknologi skaper vi spesialiserte modeller som genererer perfekt merkevarekonistente assets tilpasset deres unike visuelle identitet.',
+    ctaText: 'Lær mer',
     ctaHref: '/contact',
   },
   {
     id: 'ai-workflow',
     title: 'KI-drevet arbeidsflyt',
     description:
-      'Fra ide til ferdig produkt - v&aring;re KI-l&oslash;sninger str&oslash;mlinjeformer hele designprosessen. Spar tid, oppretthold kvalitet, og skaler effektivt.',
+      'Fra ide til ferdig produkt - våre KI-løsninger strømlinjeformer hele designprosessen. Spar tid, oppretthold kvalitet, og skaler effektivt.',
     ctaText: 'Se hvordan',
     ctaHref: '/contact',
     backgroundImage: imageLaptop,
@@ -90,8 +90,16 @@ export function HeroCarousel() {
   const hasBackground = currentSlide.backgroundImage
 
   return (
-    <div className="relative max-w-3xl">
-      <div className="relative overflow-hidden rounded-3xl">
+    <div
+      className={
+        hasBackground
+          ? 'relative -mx-6 sm:-mx-12 lg:-mx-20'
+          : 'relative max-w-3xl'
+      }
+    >
+      <div
+        className={`relative overflow-hidden ${hasBackground ? 'rounded-none sm:rounded-3xl' : 'rounded-3xl'}`}
+      >
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={currentIndex}
@@ -141,7 +149,7 @@ export function HeroCarousel() {
             <div
               className={`relative ${
                 hasBackground
-                  ? 'flex min-h-[500px] items-center py-16 sm:min-h-[600px] sm:py-20'
+                  ? 'mx-auto flex min-h-[500px] max-w-7xl items-center px-6 py-16 sm:min-h-[600px] sm:px-12 sm:py-20 lg:px-20'
                   : ''
               }`}
             >
