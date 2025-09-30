@@ -82,7 +82,7 @@ export function HeroCarousel() {
   const hasBackground = currentSlide?.backgroundImage
 
   return (
-    <div className="relative">
+    <div className="relative pb-8">
       {/* Background Image (if present) - fades in independently - OUTSIDE overflow-hidden */}
       <AnimatePresence mode="wait">
         {hasBackground && (
