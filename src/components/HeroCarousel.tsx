@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FadeIn } from './FadeIn'
-import imageLaptop from '@/images/laptop.jpg'
+import imageCreative from '@/images/testillustration.png'
 
 const slides = [
   {
@@ -28,10 +28,10 @@ const slides = [
     id: 'creative-automation',
     title: 'Kreativ automasjon',
     description:
-      'Utnytt kraften av KI til å automatisere kreative prosesser. Fra idégenerering til ferdig design - vi hjelper deg å skalere kreativiteten uten å miste den menneskelige touchen.',
+      'Ønsker du å se hvor langt du kan nå med video? Skap visuelt stimulerende kampanjer som fanger oppmerksomhet. Enten helt realistiske, eller drømmende og abstrakte. Alt er mulig.',
     ctaText: 'Se mulighetene',
     ctaHref: '/contact',
-    backgroundImage: imageLaptop,
+    backgroundImage: imageCreative,
   },
 ]
 
