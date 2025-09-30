@@ -26,57 +26,57 @@ import { RootLayout } from '@/components/RootLayout'
 // Real-world use case examples
 const useCaseExamples = [
   {
-    id: 'mobile-app-icons',
-    title: 'Mobile App Ikoner',
-    category: 'Digital Interface',
+    id: 'vectorama',
+    title: 'Vectorama',
+    category: 'AI-drevet Vektorisering',
     year: '2024',
     logo: logoPhobia,
-    description: 'Konsistente app-ikoner på tvers av iOS og Android',
+    description: 'Automatisk vektorisering av digitale assets med AI',
     summary: [
-      'Generer komplette ikon-biblioteker som følger både iOS Human Interface Guidelines og Material Design prinsipper.',
-      'Automatisk skalering fra 16x16px til 1024x1024px med perfekt skarphet på alle enheter.',
-      'Konsistent visuell identitet som forsterker merkevaregjenkjennelse i app-stores og på hjemskjermer.',
+      'Transformerer rasterbilder til perfekte vektorgrafier ved hjelp av avansert AI. Generer skalerbare designelementer som bevarer merkevareidentitet på tvers av alle plattformer.',
+      'Fra app-ikoner til illustrasjoner - AI-modellen lærer designsystemet ditt og produserer konsistente elementer tilpasset din visuelle identitet.',
+      'Automatisk optimalisering for web, mobil, print og presentasjoner. Eksporter i alle formater (SVG, PDF, EPS) med perfekt kvalitet uansett størrelse.',
     ],
     metrics: {
-      time_saved: '92%',
-      icons_generated: '500+',
-      platforms: '6+',
+      time_saved: '90%',
+      assets_generated: '10K+',
+      quality: '100%',
     },
   },
   {
-    id: 'presentation-graphics',
-    title: 'PowerPoint Illustrasjoner',
-    category: 'Presentasjoner',
+    id: 'n8n-automation',
+    title: 'N8N Automatisering',
+    category: 'Workflow Automation',
     year: '2024',
     logo: logoFamilyFund,
-    description: 'Profesjonelle illustrasjoner for bedriftspresentasjoner',
+    description: 'Enkle og effektive automatiseringsworkflows',
     summary: [
-      'Skaper engasjerende datavisualiseringer, prosessdiagrammer og konseptuelle illustrasjoner som forsterker budskapet.',
-      'Tilpasset bedriftens merkevareidentitet med korrekte farger, typografi og visuell stil.',
-      'Optimalisert for både skjermvisning og print, med vektorbasert kvalitet som aldri blir pixelert.',
+      'Implementerer kraftige automatiseringsworkflows med N8N som kobler sammen alle dine verktøy og tjenester. Fra enkel datasynkronisering til komplekse forretningsprosesser.',
+      'Visuell workflow-designer gjør det enkelt å bygge, teste og vedlikeholde automatiseringer. Integrer med 400+ tjenester uten å skrive kode.',
+      'Automatiser repetitive oppgaver som dataimport, rapportgenerering, kundevarsler og systemsynkronisering. Spar timer hver dag med smart automatisering.',
     ],
     metrics: {
       time_saved: '85%',
-      slides_enhanced: '1200+',
-      presentations: '150+',
+      workflows: '150+',
+      integrations: '50+',
     },
   },
   {
-    id: 'print-posters',
-    title: 'Plakat & Print Design',
-    category: 'Print Media',
+    id: 'dag-agents',
+    title: 'Avanserte AI-Agenter',
+    category: 'Agentic Workflows (DAG)',
     year: '2024',
     logo: logoUnseal,
-    description: 'Høyoppløselige illustrasjoner for trykte materialer',
+    description: 'Intelligente agentsystemer med DAG-arkitektur',
     summary: [
-      'Produserer skalerbare vektorillustrasjoner optimalisert for store format som plakater, bannere og utstillingsmateriell.',
-      'Automatisk fargetilpasning for CMYK-trykk med ICC-profiler for nøyaktig fargereproduksjon.',
-      'Genererer både hovedillustrasjoner og støtteelementer som ikoner, mønstre og dekorative elementer.',
+      'Bygger sofistikerte AI-agentsystemer basert på Directed Acyclic Graphs (DAG) for komplekse beslutningsprosesser og autonome workflows.',
+      'Agentene kan resonnere, planlegge og utføre oppgaver selvstendig ved å kombinere flere AI-modeller, verktøy og datakilder i strukturerte grafnettverk.',
+      'Perfekt for avanserte bruksområder som kundeservice-automatisering, intelligent dokumentbehandling, forskningsanalyse og dynamisk beslutningsstøtte.',
     ],
     metrics: {
-      time_saved: '78%',
-      print_ready: '100%',
-      formats: '12+',
+      accuracy: '95%',
+      autonomy: 'Høy',
+      complexity: 'Avansert',
     },
   },
 ]
@@ -86,7 +86,7 @@ function UseCaseExamples() {
     <Container className="mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Bruksområder på tvers av medier
+          Våre automatiseringstjenester
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
@@ -169,11 +169,11 @@ function CaseStudies({
 }) {
   return (
     <>
-      <SectionIntro title="Kundecaser" className="mt-24 sm:mt-32 lg:mt-40">
+      <SectionIntro title="Prosjekter" className="mt-24 sm:mt-32 lg:mt-40">
         <p>
-          Se hvordan ledende bedrifter har implementert Vectorama for å
-          automatisere designproduksjon og sikre merkevarekonistens på tvers av
-          alle kanaler.
+          Eksempler på hvordan vi har implementert automatiseringsløsninger på
+          tvers av ulike domener - fra designautomatisering til intelligente
+          workflow-systemer og avanserte AI-agenter.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -260,43 +260,43 @@ function Clients() {
   )
 }
 
-function VectoramaShowcase() {
+function AutomationShowcase() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="mb-8 font-display text-2xl font-semibold text-neutral-950">
-          Telenor Case Study
+          Suksesshistorie: Komplett automatiseringsløsning
         </h2>
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
           <div>
             <h3 className="mb-4 font-display text-xl font-semibold text-neutral-950">
-              Komplett designsystem-automatisering
+              Fra manuelle prosesser til smart automatisering
             </h3>
             <p className="mb-6 text-base text-neutral-600">
-              Implementerte Vectorama for å automatisere produksjon av ikoner,
-              illustrasjoner og designelementer på tvers av alle digitale og
-              trykte kanaler. Resultatet var 85% reduksjon i designtid og
-              perfekt merkevarekonistens fra mobile apper til
-              PowerPoint-presentasjoner og trykte kampanjer.
+              Implementerte en helhetlig automatiseringsløsning som kombinerer
+              Vectorama for designautomatisering, N8N for workflow-orkestrering,
+              og AI-agenter for intelligent beslutningsstøtte. Resultatet var
+              85% reduksjon i manuelt arbeid og betydelig forbedret konsistens
+              på tvers av alle prosesser.
             </p>
             <div className="space-y-3 text-sm text-neutral-600">
               <div className="flex justify-between">
                 <span>
                   <strong>Utfordring:</strong>
                 </span>
-                <span>Inkonsistente designelementer på tvers av kanaler</span>
+                <span>Tidkrevende manuelle prosesser og inkonsistens</span>
               </div>
               <div className="flex justify-between">
                 <span>
                   <strong>Løsning:</strong>
                 </span>
-                <span>AI-system trent på Telenors merkevareidentitet</span>
+                <span>Tredelt automatiseringsstrategi med AI</span>
               </div>
               <div className="flex justify-between">
                 <span>
                   <strong>Resultat:</strong>
                 </span>
-                <span>85% tidsbesparelse, 100% merkevarekonistens</span>
+                <span>85% tidsbesparelse, full automatisering</span>
               </div>
             </div>
           </div>
@@ -304,10 +304,10 @@ function VectoramaShowcase() {
             <div className="grid grid-cols-2 gap-6 text-center">
               <div>
                 <div className="mb-2 text-3xl font-bold text-neutral-950">
-                  15,000+
+                  200+
                 </div>
                 <div className="text-sm text-neutral-600">
-                  Designelementer generert
+                  Automatiserte workflows
                 </div>
               </div>
               <div>
@@ -315,15 +315,15 @@ function VectoramaShowcase() {
                   85%
                 </div>
                 <div className="text-sm text-neutral-600">
-                  Reduksjon i designtid
+                  Reduksjon i manuelt arbeid
                 </div>
               </div>
               <div>
                 <div className="mb-2 text-3xl font-bold text-neutral-950">
-                  12
+                  24/7
                 </div>
                 <div className="text-sm text-neutral-600">
-                  Ulike medieformat
+                  Autonome AI-agenter
                 </div>
               </div>
               <div>
@@ -331,7 +331,7 @@ function VectoramaShowcase() {
                   100%
                 </div>
                 <div className="text-sm text-neutral-600">
-                  Merkevarekonistens
+                  Prosess-konsistens
                 </div>
               </div>
             </div>
@@ -343,9 +343,9 @@ function VectoramaShowcase() {
 }
 
 export const metadata: Metadata = {
-  title: 'Bruksområder & Cases',
+  title: 'Tjenester & Cases',
   description:
-    'Se hvordan Vectorama brukes til alt fra app-ikoner til PowerPoint-illustrasjoner og print-design. Eksempler på AI-drevet designautomatisering.',
+    'Fra AI-drevet vektorisering (Vectorama) og N8N workflow-automatisering til avanserte AI-agenter med DAG-arkitektur. Se våre automatiseringsløsninger.',
 }
 
 export default async function Work() {
@@ -353,31 +353,28 @@ export default async function Work() {
 
   return (
     <RootLayout>
-      <PageIntro
-        eyebrow="Bruksområder"
-        title="Fra digitale grensesnitt til trykte materialer"
-      >
+      <PageIntro eyebrow="Tjenester" title="Automatisering på alle nivåer">
         <p>
-          Vectorama automatiserer designproduksjon på tvers av alle medier og
-          plattformer. Se hvordan vår AI-teknologi skaper konsistente,
-          merkevareriktige designelementer - fra app-ikoner og web-grafikk til
-          PowerPoint-illustrasjoner og plakat-design.
+          Vi tilbyr tre hovednivåer av automatisering: Vectorama for AI-drevet
+          vektorisering av digitale assets, N8N for effektive
+          workflow-automatiseringer, og avanserte AI-agentsystemer med
+          DAG-arkitektur for komplekse, autonome beslutningsprosesser.
         </p>
       </PageIntro>
 
       <UseCaseExamples />
 
-      <VectoramaShowcase />
+      <AutomationShowcase />
 
       <CaseStudies caseStudies={caseStudies} />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Telenor', logo: logoPhobia }}
+        client={{ name: 'Fornøyd kunde', logo: logoPhobia }}
       >
-        Vectorama har transformert hele vår designprosess. Fra app-ikoner til
-        presentasjonsgrafikk og trykte kampanjer - alt produseres nå med perfekt
-        merkevarekonistens og på en brøkdel av tiden.
+        Automateket har transformert hvordan vi jobber. Fra designautomatisering
+        med Vectorama til intelligente workflows med N8N og AI-agenter - vi har
+        spart utallige timer og oppnådd en konsistens vi ikke trodde var mulig.
       </Testimonial>
 
       <Clients />
