@@ -210,11 +210,11 @@ function Values() {
         title="Balansere p&aring;litelighet og innovasjon"
       >
         <p>
-          Vi str&aring;ber etter &aring; v&aelig;re i forkant av nye trender og
-          teknologier innen KI og automatisering. Vi kombinerer bepr&oslash;vde
-          metoder med nytenkning for &aring; levere l&oslash;sninger som
-          b&aring;de er robuste og nyskapende. V&aring;re kjerneverdier styrer
-          alle v&aring;re beslutninger.
+          Vi streber etter &aring; v&aelig;re i forkant av nye trender og
+          teknologier innen KI og automatisering. Vi kombinerer kjente metoder
+          med nytenkning for &aring; levere l&oslash;sninger som b&aring;de er
+          robuste og nyskapende. V&aring;re kjerneverdier styrer alle v&aring;re
+          beslutninger.
         </p>
       </SectionIntro>
 
@@ -270,8 +270,8 @@ export default function Process() {
         <p>
           Vi tror p&aring; effektivitet og &aring; maksimere v&aring;re
           ressurser for &aring; gi best mulig verdi til v&aring;re kunder. Vi
-          kombinerer bepr&oslash;vd metodikk med skreddersydde
-          KI-l&oslash;sninger tilpasset deres unike behov.
+          kombinerer kjent metodikk med skreddersydde KI-l&oslash;sninger
+          tilpasset kundenes unike behov.
         </p>
       </PageIntro>
 
