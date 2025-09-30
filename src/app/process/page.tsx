@@ -56,40 +56,45 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="Discover" image={{ src: imageWhiteboard }}>
+    <Section title="Oppdage" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
+          Vi jobber tett med kundene v&aring;re for &aring; forst&aring; deres{' '}
+          <strong className="font-semibold text-neutral-950">behov</strong> og
+          m&aring;l. Vi g&aring;r inn i den daglige driften for &aring; avdekke
+          hva som faktisk driver virksomheten fremover.
         </p>
         <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
+          V&aring;rt team av privatetterforskere skygger selskapets
+          direkt&oslash;rer i flere uker, mens v&aring;e kundeansvarlige
+          fokuserer p&aring; grundig gjennomgang av s&oslash;ppelet deres slik
+          at vi f&aring;r god dybdeforst&aring;else av deres{' '}
+          <strong className="font-semibold text-neutral-950">
+            verdikjeder
+          </strong>{' '}
+          .
         </p>
         <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
+          Neida. Men Vi &oslash;nsker &aring; sitte tett med dere for &aring;
+          kartlegge hvor modne dere er innenfor KI, og hvordan vi kan bidra med
+          v&aring;r kompetanse p&aring; best mulig m&aring;te. Gjennom dialog og
+          analyse identifiserer vi mulighetsomr&aring;der og utarbeider en
+          skreddersydd tiln&aelig;rmingsplan.
         </p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
+        Inkludert i denne fasen
       </h3>
       <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
+        <TagListItem>
+          Dyptg&aring;ende sp&oslash;rreunders&oslash;kelser
+        </TagListItem>
+        <TagListItem>Mulighets- og gjennomf&oslash;rbarhetsstudier</TagListItem>
+        <TagListItem>Medarbeiderunders&oslash;kelser</TagListItem>
+        <TagListItem>Konseptbevis (PoC)</TagListItem>
+        <TagListItem>Modenhetsanalyse innenfor KI</TagListItem>
+        <TagListItem>&Oslash;vrig konsultasjon</TagListItem>
       </TagList>
     </Section>
   )

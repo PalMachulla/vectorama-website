@@ -62,16 +62,17 @@ function Clients() {
               <div className="flex w-full flex-col lg:w-1/2">
                 <FadeIn>
                   <h2 className="mr-10 font-display text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
-                    Hvordan ser automasjon ut sånn på tampen av 2025?
+                    Hvordan ser automasjon ut s&aring;nn p&aring; tampen av
+                    2025?
                   </h2>
                 </FadeIn>
                 <FadeIn>
                   <p className="mt-6 mr-10 text-lg text-neutral-600">
                     <i>Marketing automation er bare s&aring; 2015...</i> Vel,
                     ikke helt, det er i h&oslash;yeste grad levende. Det er bare
-                    det at i dag kan vi gj&oslash;re så mye, mye mer. Tenk bare
-                    på hvor langt KI har kommet. Hva? har dere ikke kommet i
-                    gang Med KI enn&aring;? Da vil vi snakke med deg.
+                    det at i dag kan vi gj&oslash;re s&aring; mye, mye mer. Tenk
+                    bare p&aring; hvor langt KI har kommet. Hva? har dere ikke
+                    kommet i gang Med KI enn&aring;? Da vil vi snakke med deg.
                   </p>
                 </FadeIn>
               </div>
@@ -91,13 +92,13 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-        title="Hva vi kan hjelpe til med når det kommer til automasjon"
+        title="Hva vi kan hjelpe til med n&aring;r det kommer til automasjon"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Automasjon kan være så langt. Fra enkle flows til mer avanserte
-          agent-oppsett. Vi hjelper deg med små eller store prosjekter som
-          passer til ditt behov og din bedrift..
+          Automasjon kan v&aelig;re s&aring; langt. Fra enkle flows til mer
+          avanserte agent-oppsett. Vi hjelper deg med sm&aring; eller store
+          prosjekter som passer til ditt behov og din bedrift..
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -152,9 +153,10 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Vi transformerer designprosesser ved å kombinere avansert AI-teknologi
-          med dypgående forståelse av merkevareidentitet, og skaper komplette
-          designsystemer som skalerer på tvers av alle plattformer.
+          Vi transformerer designprosesser ved &aring; kombinere avansert
+          AI-teknologi med dypg&aring;ende forst&aring;else av
+          merkevareidentitet, og skaper komplette designsystemer som skalerer
+          p&aring; tvers av alle plattformer.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -171,7 +173,8 @@ function Services() {
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-132 lg:pl-4">
             <ListItem title="Designsystem-analyse">
               Vi analyserer deres eksisterende designsystem, merkevareidentitet
-              og visuelle retningslinjer for å skape en skreddersydd AI-modell.
+              og visuelle retningslinjer for &aring; skape en skreddersydd
+              AI-modell.
             </ListItem>
             <ListItem title="Komplett elementbibliotek">
               Generer ikoner, piktogrammer, illustrasjoner og
@@ -180,11 +183,12 @@ function Services() {
             </ListItem>
             <ListItem title="Plattformtilpasning">
               Automatisk optimalisering for web, mobile apper, print,
-              presentasjoner og sosiale medier med korrekt oppløsning og format.
+              presentasjoner og sosiale medier med korrekt oppl&oslash;sning og
+              format.
             </ListItem>
             <ListItem title="Kvalitetssikring">
               Ekspertdesignere kurerer og validerer alle AI-genererte elementer
-              for å sikre høyeste kvalitet og merkevareintegritet.
+              for &aring; sikre h&oslash;yeste kvalitet og merkevareintegritet.
             </ListItem>
           </List>
         </div>
@@ -196,11 +200,11 @@ function Services() {
 function ProcessSteps() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-32">
-      <SectionIntro title="Vår metodikk" className="mb-16">
+      <SectionIntro title="V&aring;r metodikk" className="mb-16">
         <p>
           Ut i fra deres designsystem og deres merkevareidentitet skaper vi en
-          AI-løsning som genererer konsistente designelementer på tvers av alle
-          medier og plattformer.
+          AI-l&oslash;sning som genererer konsistente designelementer p&aring;
+          tvers av alle medier og plattformer.
         </p>
       </SectionIntro>
 
@@ -215,8 +219,8 @@ function ProcessSteps() {
             </h3>
             <p className="mt-4 text-base text-neutral-600">
               Vi kartlegger deres eksisterende designsystem, merkevareidentitet,
-              fargepaletter og typografi for å forstå deres unike visuelle
-              språk.
+              fargepaletter og typografi for &aring; forst&aring; deres unike
+              visuelle spr&aring;k.
             </p>
           </div>
         </FadeIn>
@@ -230,9 +234,9 @@ function ProcessSteps() {
               AI-modell trening
             </h3>
             <p className="mt-4 text-base text-neutral-600">
-              Vår AI lærer deres spesifikke designprinsipper og
-              merkevareidentitet for å produsere konsistente, merkevareriktige
-              resultater.
+              V&aring;r AI l&aelig;rer deres spesifikke designprinsipper og
+              merkevareidentitet for &aring; produsere konsistente,
+              merkevareriktige resultater.
             </p>
           </div>
         </FadeIn>
@@ -258,7 +262,7 @@ function ProcessSteps() {
 
 export const metadata: Metadata = {
   description:
-    'Vectorama - AI-powered designsystem automatisering. Generer merkevarekonistente ikoner, illustrasjoner og designelementer på tvers av alle plattformer.',
+    'Vectorama - AI-powered designsystem automatisering. Generer merkevarekonistente ikoner, illustrasjoner og designelementer p&aring; tvers av alle plattformer.',
 }
 
 export default async function Home() {
@@ -280,9 +284,10 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Telenor', logo: logoPhobiaDark }}
       >
-        Vectorama har transformert vår designprosess. Vi kan nå produsere
-        konsistente, merkevareriktige designelementer på en brøkdel av tiden det
-        tok tidligere, alt fra app-ikoner til presentasjonsgrafikk.
+        Vectorama har transformert v&aring;r designprosess. Vi kan n&aring;
+        produsere konsistente, merkevareriktige designelementer p&aring; en
+        br&oslash;kdel av tiden det tok tidligere, alt fra app-ikoner til
+        presentasjonsgrafikk.
       </Testimonial>
 
       <Services />

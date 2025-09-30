@@ -10,7 +10,7 @@ const slides = [
     id: 'vectorama',
     title: 'Vectorama',
     description:
-      'Automatiser designproduksjon med AI. Generer merkevarekonistente ikoner, illustrasjoner og designelementer som skalerer på tvers av alle plattformer - fra apper og nettsider til presentasjoner og trykte materialer.',
+      'Automatiser designproduksjon med AI. Generer merkevarekonistente ikoner, illustrasjoner og designelementer som skalerer p&aring; tvers av alle plattformer - fra apper og nettsider til presentasjoner og trykte materialer.',
     ctaText: 'Kom i gang',
     ctaHref: '/contact',
   },
@@ -18,7 +18,7 @@ const slides = [
     id: 'n8n',
     title: 'N8N Automation',
     description:
-      'Automatiser arbeidsflyten din med kraftige integrasjoner. Vi bygger skreddersydde automatiseringsløsninger som forbinder deres systemer, sparer tid og reduserer manuelle oppgaver.',
+      'Automatiser arbeidsflyten din med kraftige integrasjoner. Vi bygger skreddersydde automatiseringsl&oslash;sninger som forbinder deres systemer, sparer tid og reduserer manuelle oppgaver.',
     ctaText: 'Utforsk automation',
     ctaHref: '/contact',
   },
@@ -26,8 +26,8 @@ const slides = [
     id: 'lora',
     title: 'LoRa Training of Assets',
     description:
-      'Tren AI-modeller på deres egne designelementer. Med LoRa-teknologi skaper vi spesialiserte modeller som genererer perfekt merkevarekonistente assets tilpasset deres unike visuelle identitet.',
-    ctaText: 'Lær mer',
+      'Tren AI-modeller p&aring; deres egne designelementer. Med LoRa-teknologi skaper vi spesialiserte modeller som genererer perfekt merkevarekonistente assets tilpasset deres unike visuelle identitet.',
+    ctaText: 'L&aelig;r mer',
     ctaHref: '/contact',
   },
 ]
