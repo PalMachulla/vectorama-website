@@ -79,7 +79,7 @@ export function HeroCarousel() {
   }
 
   const currentSlide = slides[currentIndex]
-  const hasBackground = currentSlide.backgroundImage
+  const hasBackground = currentSlide?.backgroundImage
 
   return (
     <div className="relative max-w-3xl">
