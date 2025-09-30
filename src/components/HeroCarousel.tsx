@@ -124,9 +124,7 @@ export function HeroCarousel() {
                 paginate(-1)
               }
             }}
-            className={`relative cursor-grab active:cursor-grabbing ${
-              hasBackground ? 'min-h-[500px] sm:min-h-[600px]' : ''
-            }`}
+            className="relative min-h-[500px] cursor-grab active:cursor-grabbing sm:min-h-[600px]"
           >
             {/* Background Image (if present) */}
             {hasBackground && (
@@ -147,10 +145,8 @@ export function HeroCarousel() {
 
             {/* Content */}
             <div
-              className={`relative ${
-                hasBackground
-                  ? 'mx-auto flex min-h-[500px] max-w-7xl items-center px-6 py-16 sm:min-h-[600px] sm:px-12 sm:py-20 lg:px-20'
-                  : ''
+              className={`relative flex min-h-[500px] items-center py-16 sm:min-h-[600px] sm:py-20 ${
+                hasBackground ? 'mx-auto max-w-7xl px-6 sm:px-12 lg:px-20' : ''
               }`}
             >
               <div className={hasBackground ? 'max-w-2xl' : ''}>
