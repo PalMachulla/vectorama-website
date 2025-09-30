@@ -119,7 +119,14 @@ export function HeroCarousel() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.8, ease: 'easeInOut' }}
-                  className="absolute inset-0 -z-10"
+                  className="absolute inset-y-0 -z-10"
+                  style={{
+                    left: '50%',
+                    right: '50%',
+                    marginLeft: '-50vw',
+                    marginRight: '-50vw',
+                    width: '100vw',
+                  }}
                 >
                   <Image
                     src={currentSlide.backgroundImage}
