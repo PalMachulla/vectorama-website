@@ -21,6 +21,7 @@ import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import imageCopymachine from '@/images/copymachine.png'
+import imageAimachine from '@/images/aimachine.png'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import { RootLayout } from '@/components/RootLayout'
 
@@ -38,41 +39,47 @@ const clients = [
 
 function Clients() {
   return (
-    <div
-      className="copymachine-bg mx-0 mt-24 bg-neutral-200 py-20 sm:mt-32 sm:py-32 lg:mx-0 lg:mt-32"
-      style={
-        {
-          '--bg-image': `linear-gradient(to right, #e5e5e5 0%, #e5e5e5 50%, transparent 50%), url(${imageCopymachine.src})`,
-          backgroundRepeat: 'no-repeat, no-repeat',
-          backgroundPosition: 'left center, right center',
-          backgroundSize: '100% 100%, auto 100%',
-        } as React.CSSProperties & { '--bg-image': string }
-      }
-    >
-      <Container>
-        <FadeInStagger faster>
-          <div className="flex flex-col items-start">
-            {/* Content */}
-            <div className="flex w-full flex-col lg:w-1/2">
-              <FadeIn>
-                <h2 className="mr-10 font-display text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
-                  Hvordan ser en kopimaskin ut i 2025?
-                </h2>
-              </FadeIn>
-              <FadeIn>
-                <p className="mt-6 mr-10 text-lg text-neutral-600">
-                  Dette spørsmålet ønsket vi å utfordre. Nå som vi ikke lenger
-                  er bundet til å kopiere, men faktisk generere. Med andre ord,
-                  kan vi generere noe som er verdt å kopiere? Kan vi få god nok
-                  kvalitet slik at vi genererer helt &ldquo;on-brand&rdquo;? Og
-                  kan det automatiseres?
-                </p>
-              </FadeIn>
+    <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          @media (min-width: 1024px) {
+            .aimachine-bg {
+              background-image: url(${imageAimachine.src});
+              background-repeat: no-repeat;
+              background-position: calc(100% + 80px) center;
+              background-size: 60% auto;
+            }
+          }
+        `,
+        }}
+      />
+      <div className="aimachine-bg mx-0 mt-24 bg-neutral-50 py-20 sm:mt-32 sm:py-32 lg:mx-0 lg:mt-32">
+        <Container>
+          <FadeInStagger faster>
+            <div className="flex flex-col items-start">
+              {/* Content */}
+              <div className="flex w-full flex-col lg:w-1/2">
+                <FadeIn>
+                  <h2 className="mr-10 font-display text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
+                    Hvordan ser automasjon ut sånn på tampen av 2025?
+                  </h2>
+                </FadeIn>
+                <FadeIn>
+                  <p className="mt-6 mr-10 text-lg text-neutral-600">
+                    <i>Marketing automation er bare s&aring; 2015...</i> Vel,
+                    ikke helt, det er i h&oslash;yeste grad levende. Det er bare
+                    det at i dag kan vi gj&oslash;re så mye, mye mer. Tenk bare
+                    på hvor langt KI har kommet. Hva? har dere ikke kommet i
+                    gang Med KI enn&aring;? Da vil vi snakke med deg.
+                  </p>
+                </FadeIn>
+              </div>
             </div>
-          </div>
-        </FadeInStagger>
-      </Container>
-    </div>
+          </FadeInStagger>
+        </Container>
+      </div>
+    </>
   )
 }
 

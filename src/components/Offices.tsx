@@ -39,10 +39,10 @@ export function Offices({
         </Office>
       </li>
       <li>
-        <Office name="Vectorama HQ" invert={invert}>
+        <Office name="Automateket HQ" invert={invert}>
           Powered by Dentsu
           <br />
-          AI-drevet design innovasjon
+          KI-drevet design innovasjon
         </Office>
       </li>
     </ul>
