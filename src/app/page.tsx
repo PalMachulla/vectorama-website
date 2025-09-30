@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { HeroCarousel } from '@/components/HeroCarousel'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
@@ -259,25 +260,7 @@ export default async function Home() {
   return (
     <RootLayout>
       <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-balance text-neutral-950 sm:text-7xl">
-            Vectorama
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            Automatiser designproduksjon med AI. Generer merkevarekonistente
-            ikoner, illustrasjoner og designelementer som skalerer på tvers av
-            alle plattformer - fra apper og nettsider til presentasjoner og
-            trykte materialer.
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-lg bg-neutral-950 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-neutral-800"
-            >
-              Kom i gang
-            </Link>
-          </div>
-        </FadeIn>
+        <HeroCarousel />
       </Container>
 
       <Clients />
