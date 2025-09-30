@@ -139,10 +139,10 @@ export function HeroCarousel() {
                 paginate(-1)
               }
             }}
-            className="relative min-h-[500px] cursor-grab active:cursor-grabbing sm:min-h-[600px]"
+            className="relative min-h-[400px] cursor-grab active:cursor-grabbing sm:min-h-[450px]"
           >
             {/* Content */}
-            <div className="relative flex min-h-[500px] items-center py-16 sm:min-h-[600px] sm:py-20">
+            <div className="relative flex min-h-[400px] items-center py-12 sm:min-h-[450px] sm:py-16">
               <div>
                 <h1
                   className={`font-display text-5xl font-medium tracking-tight text-balance sm:text-7xl ${
@@ -187,8 +187,12 @@ export function HeroCarousel() {
             }}
             className={`h-2 rounded-full transition-all ${
               index === currentIndex
-                ? 'w-8 bg-neutral-950'
-                : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                ? hasBackground
+                  ? 'w-8 bg-white'
+                  : 'w-8 bg-neutral-950'
+                : hasBackground
+                  ? 'w-2 bg-white/40 hover:bg-white/60'
+                  : 'w-2 bg-neutral-300 hover:bg-neutral-400'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -199,7 +203,11 @@ export function HeroCarousel() {
       <div className="mt-6 hidden items-center gap-4 sm:flex">
         <button
           onClick={() => paginate(-1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-950 transition-colors hover:border-neutral-950 hover:bg-neutral-50"
+          className={`flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
+            hasBackground
+              ? 'border-white/30 text-white hover:border-white hover:bg-white/10'
+              : 'border-neutral-300 text-neutral-950 hover:border-neutral-950 hover:bg-neutral-50'
+          }`}
           aria-label="Previous slide"
         >
           <svg
@@ -218,7 +226,11 @@ export function HeroCarousel() {
         </button>
         <button
           onClick={() => paginate(1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-300 text-neutral-950 transition-colors hover:border-neutral-950 hover:bg-neutral-50"
+          className={`flex h-10 w-10 items-center justify-center rounded-full border transition-colors ${
+            hasBackground
+              ? 'border-white/30 text-white hover:border-white hover:bg-white/10'
+              : 'border-neutral-300 text-neutral-950 hover:border-neutral-950 hover:bg-neutral-50'
+          }`}
           aria-label="Next slide"
         >
           <svg
