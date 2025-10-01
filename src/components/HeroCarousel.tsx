@@ -151,62 +151,63 @@ export function HeroCarousel() {
                   </Link>
                 </div>
               </div>
-
-              {/* Masked illustration on right side - large screens only */}
-              {hasBackground && (
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={`illustration-${currentIndex}`}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeInOut' }}
-                    className="pointer-events-none absolute top-1/2 right-0 hidden -translate-y-1/2 lg:block"
-                  >
-                    <svg
-                      viewBox={`0 0 ${maskShape.width} ${maskShape.height}`}
-                      className="h-[500px] w-auto"
-                    >
-                      <defs>
-                        <clipPath id={`${maskId}-clip`}>
-                          <path
-                            d={maskShape.path}
-                            fillRule="evenodd"
-                            clipRule="evenodd"
-                          />
-                        </clipPath>
-                      </defs>
-                      <g clipPath={`url(#${maskId}-clip)`}>
-                        <foreignObject
-                          width={maskShape.width}
-                          height={maskShape.height}
-                        >
-                          <div
-                            className="h-full w-full"
-                            style={{
-                              width: maskShape.width,
-                              height: maskShape.height,
-                            }}
-                          >
-                            <Image
-                              src={currentSlide.backgroundImage}
-                              alt=""
-                              width={maskShape.width}
-                              height={maskShape.height}
-                              className="h-full w-full object-cover"
-                              priority
-                            />
-                          </div>
-                        </foreignObject>
-                      </g>
-                    </svg>
-                  </motion.div>
-                </AnimatePresence>
-              )}
             </div>
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Masked illustration on right side - OUTSIDE overflow-hidden to avoid clipping */}
+      {hasBackground && (
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`illustration-${currentIndex}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            className="pointer-events-none absolute top-1/2 right-0 hidden -translate-y-1/2 lg:block"
+            style={{ top: '230px' }}
+          >
+            <svg
+              viewBox={`0 0 ${maskShape.width} ${maskShape.height}`}
+              className="h-[500px] w-auto"
+            >
+              <defs>
+                <clipPath id={`${maskId}-clip`}>
+                  <path
+                    d={maskShape.path}
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                  />
+                </clipPath>
+              </defs>
+              <g clipPath={`url(#${maskId}-clip)`}>
+                <foreignObject
+                  width={maskShape.width}
+                  height={maskShape.height}
+                >
+                  <div
+                    className="h-full w-full"
+                    style={{
+                      width: maskShape.width,
+                      height: maskShape.height,
+                    }}
+                  >
+                    <Image
+                      src={currentSlide.backgroundImage}
+                      alt=""
+                      width={maskShape.width}
+                      height={maskShape.height}
+                      className="h-full w-full object-cover"
+                      priority
+                    />
+                  </div>
+                </foreignObject>
+              </g>
+            </svg>
+          </motion.div>
+        </AnimatePresence>
+      )}
 
       {/* Dot indicators */}
       <div className="mt-4 flex items-center gap-2">
