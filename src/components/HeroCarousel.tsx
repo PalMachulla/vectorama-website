@@ -133,8 +133,12 @@ export function HeroCarousel() {
                   height={maskShape.height}
                 >
                   <div
-                    className="h-full w-full"
-                    style={{ width: maskShape.width, height: maskShape.height }}
+                    className="h-full w-full origin-center"
+                    style={{
+                      width: maskShape.width,
+                      height: maskShape.height,
+                      transform: 'scaleX(0.667) scaleY(0.8)',
+                    }}
                   >
                     <Image
                       src={currentSlide.backgroundImage}
