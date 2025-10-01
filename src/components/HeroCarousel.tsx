@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FadeIn } from './FadeIn'
-import imageCreative from '@/images/testillustration.png'
+import imageCreative from '@/images/ragdoll.png'
 import imagePopculture from '@/images/popculture.png'
 import imageRabbit from '@/images/rabbit.png'
 
