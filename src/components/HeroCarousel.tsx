@@ -165,7 +165,7 @@ export function HeroCarousel() {
                   >
                     <svg
                       viewBox={`0 0 ${maskShape.width} ${maskShape.height}`}
-                      className="h-96 w-auto"
+                      className="h-[500px] w-auto"
                     >
                       <defs>
                         <clipPath id={`${maskId}-clip`}>
