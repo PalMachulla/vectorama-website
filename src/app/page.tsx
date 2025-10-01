@@ -21,7 +21,6 @@ import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import imageCopymachine from '@/images/copymachine.png'
-import imageAimachine from '@/images/aimachine.png'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import { RootLayout } from '@/components/RootLayout'
 
@@ -39,48 +38,26 @@ const clients = [
 
 function Clients() {
   return (
-    <>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-          @media (min-width: 1024px) {
-            .aimachine-bg {
-              background-image: url(${imageAimachine.src});
-              background-repeat: no-repeat;
-              background-position: calc(100% + 80px) center;
-              background-size: 60% auto;
-            }
-          }
-        `,
-        }}
-      />
-      <div className="aimachine-bg mx-0 mt-24 bg-neutral-50 py-20 sm:mt-32 sm:py-32 lg:mx-0 lg:mt-32">
-        <Container>
-          <FadeInStagger faster>
-            <div className="flex flex-col items-start">
-              {/* Content */}
-              <div className="flex w-full flex-col lg:w-1/2">
-                <FadeIn>
-                  <h2 className="mr-10 font-display text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
-                    Hvordan ser automasjon ut s&aring;nn p&aring; tampen av
-                    2025?
-                  </h2>
-                </FadeIn>
-                <FadeIn>
-                  <p className="mt-6 mr-10 text-lg text-neutral-600">
-                    <i>Marketing automation er bare s&aring; 2015...</i> Vel,
-                    ikke helt, det er i h&oslash;yeste grad levende. Det er bare
-                    det at i dag kan vi gj&oslash;re s&aring; mye, mye mer. Tenk
-                    bare p&aring; hvor langt KI har kommet. Hva? har dere ikke
-                    kommet i gang Med KI enn&aring;? Da vil vi snakke med deg.
-                  </p>
-                </FadeIn>
-              </div>
-            </div>
-          </FadeInStagger>
-        </Container>
-      </div>
-    </>
+    <div className="mx-0 mt-24 py-20 sm:mt-32 sm:py-32 lg:mx-0 lg:mt-32">
+      <Container>
+        <FadeInStagger faster>
+          <FadeIn>
+            <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl lg:w-2/3">
+              Hvordan ser automasjon ut s&aring;nn p&aring; tampen av 2025?
+            </h2>
+          </FadeIn>
+          <FadeIn>
+            <p className="mt-6 text-xl text-neutral-600 lg:w-2/3">
+              <i>Marketing automation er bare s&aring; 2015...</i> Vel, ikke
+              helt, det er i h&oslash;yeste grad levende. Det er bare det at i
+              dag kan vi gj&oslash;re s&aring; mye, mye mer. Tenk bare p&aring;
+              hvor langt KI har kommet. Hva? har dere ikke kommet i gang Med KI
+              enn&aring;? Da vil vi snakke med deg.
+            </p>
+          </FadeIn>
+        </FadeInStagger>
+      </Container>
+    </div>
   )
 }
 

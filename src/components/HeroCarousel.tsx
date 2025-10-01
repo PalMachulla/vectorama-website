@@ -21,24 +21,24 @@ const slides = [
     title: 'Vectorama',
     description:
       'Automatiser designproduksjon med AI. Generer merkevarekonistente ikoner, illustrasjoner og designelementer i vektorformat - fra apper og nettsider til powerpoint og trykte flater.',
-    ctaText: 'Kom i gang',
+    ctaText: 'Utforsk Vectorama',
     ctaHref: '/contact',
     backgroundImage: imagePopculture,
   },
   {
     id: 'n8n',
-    title: 'N8N Automasjon',
+    title: 'Vektorautomasjon',
     description:
       'Automatiser arbeidsflyten din med kraftige integrasjoner. Vi bygger skreddersydde automatiseringsløsninger som forbinder deres systemer, sparer tid og reduserer manuelle oppgaver.',
-    ctaText: 'Utforsk automasjon',
+    ctaText: 'Utforsk Vectorama',
     ctaHref: '/contact',
   },
   {
     id: 'creative-automation',
-    title: 'Kreativ automasjon',
+    title: 'Alle flater',
     description:
       'Ønsker du å se hvor langt du kan nå med video? Skap visuelt stimulerende kampanjer som fanger oppmerksomhet. Enten helt realistiske, eller drømmende og abstrakte. Alt er mulig.',
-    ctaText: 'Se mulighetene',
+    ctaText: 'Utforsk Vectorama',
     ctaHref: '/contact',
     backgroundImage: imageCreative,
   },
