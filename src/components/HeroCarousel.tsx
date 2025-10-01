@@ -154,6 +154,14 @@ export function HeroCarousel() {
                   </div>
                 </foreignObject>
               </g>
+              {/* Black offset border for depth */}
+              <path
+                d={maskShape.path}
+                fill="none"
+                stroke="rgba(0, 0, 0, 0.3)"
+                strokeWidth="2"
+                transform="translate(4, 4)"
+              />
               {/* Thin white border along mask edge */}
               <path
                 d={maskShape.path}
