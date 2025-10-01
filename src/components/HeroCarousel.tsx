@@ -115,7 +115,7 @@ export function HeroCarousel() {
             {/* SVG masked version - full color inside mask */}
             <svg
               viewBox={`0 0 ${maskShape.width} ${maskShape.height}`}
-              className="relative h-full w-auto scale-125"
+              className="relative h-full w-auto translate-x-24 scale-125"
               style={{ maxHeight: '125%' }}
             >
               <defs>
