@@ -109,18 +109,8 @@ export function HeroCarousel() {
               transform: 'translateX(-50%)',
             }}
           >
-            {/* Full background with grayscale + gradient transparency */}
-            <div className="absolute inset-0">
-              <Image
-                src={currentSlide.backgroundImage}
-                alt=""
-                fill
-                className="grayscale"
-                priority
-              />
-              {/* Gradient overlay: 40% transparent on left to 100% transparent on right */}
-              <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-white" />
-            </div>
+            {/* Full background - black */}
+            <div className="absolute inset-0 bg-black" />
 
             {/* SVG masked version - full color inside mask */}
             <svg
