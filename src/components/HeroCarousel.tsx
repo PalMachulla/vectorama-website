@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { FadeIn } from './FadeIn'
 import imageCreative from '@/images/testillustration.png'
 import imagePopculture from '@/images/popculture.png'
+import imageRabbit from '@/images/rabbit.png'
 
 // Stylized shape for masking
 const maskShape = {
@@ -32,6 +33,7 @@ const slides = [
       'Automatiser arbeidsflyten din med kraftige integrasjoner. Vi bygger skreddersydde automatiseringsløsninger som forbinder deres systemer, sparer tid og reduserer manuelle oppgaver.',
     ctaText: 'Utforsk Vectorama',
     ctaHref: '/contact',
+    backgroundImage: imageRabbit,
   },
   {
     id: 'creative-automation',
