@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FadeIn } from './FadeIn'
 import imageCreative from '@/images/testillustration.png'
+import imagePopculture from '@/images/popculture.png'
 
 // Stylized shape for masking
 const maskShape = {
@@ -22,6 +23,7 @@ const slides = [
       'Automatiser designproduksjon med AI. Generer merkevarekonistente ikoner, illustrasjoner og designelementer i vektorformat - fra apper og nettsider til powerpoint og trykte flater.',
     ctaText: 'Kom i gang',
     ctaHref: '/contact',
+    backgroundImage: imagePopculture,
   },
   {
     id: 'n8n',
@@ -151,6 +153,13 @@ export function HeroCarousel() {
                   </div>
                 </foreignObject>
               </g>
+              {/* Thin white border along mask edge */}
+              <path
+                d={maskShape.path}
+                fill="none"
+                stroke="rgba(255, 255, 255, 0.3)"
+                strokeWidth="2"
+              />
             </svg>
 
             {/* Gradient overlay for text readability */}

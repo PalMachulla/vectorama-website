@@ -4,8 +4,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Vectorama',
-    default: 'Vectorama - AI-powered vector generation platform',
+    template: '%s - Automateket',
+    default: 'Automateket - KI-drevet automasjon',
   },
 }
 
