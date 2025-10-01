@@ -162,6 +162,14 @@ export function HeroCarousel() {
                 strokeWidth="2"
                 transform="translate(4, 4)"
               />
+              {/* Gray offset border (up-left) */}
+              <path
+                d={maskShape.path}
+                fill="none"
+                stroke="rgba(128, 128, 128, 0.3)"
+                strokeWidth="2"
+                transform="translate(-3, -3)"
+              />
               {/* Thin white border along mask edge */}
               <path
                 d={maskShape.path}
