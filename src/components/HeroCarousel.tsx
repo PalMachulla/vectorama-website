@@ -131,22 +131,23 @@ export function HeroCarousel() {
               </defs>
               <g clipPath={`url(#${maskId}-clip)`}>
                 <foreignObject
-                  width={maskShape.width}
-                  height={maskShape.height}
+                  width={maskShape.width * 1.5}
+                  height={maskShape.height * 1.25}
+                  x={-maskShape.width * 0.25}
+                  y={-maskShape.height * 0.125}
                 >
                   <div
-                    className="h-full w-full origin-center"
+                    className="h-full w-full"
                     style={{
-                      width: maskShape.width,
-                      height: maskShape.height,
-                      transform: 'scaleX(0.667) scaleY(0.8)',
+                      width: maskShape.width * 1.5,
+                      height: maskShape.height * 1.25,
                     }}
                   >
                     <Image
                       src={currentSlide.backgroundImage}
                       alt=""
-                      width={maskShape.width}
-                      height={maskShape.height}
+                      width={maskShape.width * 1.5}
+                      height={maskShape.height * 1.25}
                       className="h-full w-full object-cover"
                       priority
                     />
