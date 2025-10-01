@@ -150,7 +150,7 @@ export function HeroCarousel() {
           >
             {/* Content */}
             <div className="relative flex min-h-[400px] items-center py-12 sm:min-h-[450px] sm:py-16">
-              <div>
+              <div className="lg:w-2/3">
                 <h1
                   className={`font-display text-5xl font-medium tracking-tight text-balance sm:text-7xl ${
                     hasBackground ? 'text-white' : 'text-neutral-950'
