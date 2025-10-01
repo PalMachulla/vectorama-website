@@ -116,7 +116,7 @@ export function HeroCarousel() {
             />
 
             {/* Gradient overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/90 via-neutral-950/70 to-neutral-950/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-neutral-700/85 via-neutral-600/60 to-neutral-500/30" />
           </motion.div>
         )}
       </AnimatePresence>
