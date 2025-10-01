@@ -115,8 +115,8 @@ export function HeroCarousel() {
               priority
             />
 
-            {/* Gradient overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-neutral-700/85 via-neutral-600/60 to-neutral-500/30" />
+            {/* White gradient overlay for inverted contrast */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/40" />
           </motion.div>
         )}
       </AnimatePresence>
@@ -150,17 +150,17 @@ export function HeroCarousel() {
           >
             {/* Content */}
             <div className="relative flex min-h-[400px] items-center py-12 sm:min-h-[450px] sm:py-16">
-              <div className="lg:w-2/3">
+              <div className="lg:w-1/2">
                 <h1
                   className={`font-display text-5xl font-medium tracking-tight text-balance sm:text-7xl ${
-                    hasBackground ? 'text-white' : 'text-neutral-950'
+                    hasBackground ? 'text-neutral-950' : 'text-neutral-950'
                   }`}
                 >
                   {currentSlide.title}
                 </h1>
                 <p
                   className={`mt-6 text-xl ${
-                    hasBackground ? 'text-neutral-200' : 'text-neutral-600'
+                    hasBackground ? 'text-neutral-700' : 'text-neutral-600'
                   }`}
                 >
                   {currentSlide.description}
@@ -170,7 +170,7 @@ export function HeroCarousel() {
                     href={currentSlide.ctaHref}
                     className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-colors ${
                       hasBackground
-                        ? 'bg-white text-neutral-950 hover:bg-neutral-100'
+                        ? 'bg-neutral-950 text-white hover:bg-neutral-800'
                         : 'bg-neutral-950 text-white hover:bg-neutral-800'
                     }`}
                   >
@@ -195,10 +195,10 @@ export function HeroCarousel() {
             className={`h-2 rounded-full transition-all ${
               index === currentIndex
                 ? hasBackground
-                  ? 'w-8 bg-white'
+                  ? 'w-8 bg-neutral-950'
                   : 'w-8 bg-neutral-950'
                 : hasBackground
-                  ? 'w-2 bg-white/40 hover:bg-white/60'
+                  ? 'w-2 bg-neutral-950/40 hover:bg-neutral-950/60'
                   : 'w-2 bg-neutral-300 hover:bg-neutral-400'
             }`}
             aria-label={`Go to slide ${index + 1}`}
