@@ -69,7 +69,7 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-        title="Hva vi kan hjelpe til med n&aring;r det kommer til automasjon"
+        title="Noe av det arbeidet vi har stablet på beina over tid"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -176,64 +176,78 @@ function Services() {
 
 function ProcessSteps() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-32">
-      <SectionIntro title="V&aring;r metodikk" className="mb-16">
+    <>
+      <SectionIntro
+        title="Noe av det vi gjør i dag"
+        className="mt-12 sm:mt-16 lg:mt-16"
+      >
         <p>
-          Ut i fra deres designsystem og deres merkevareidentitet skaper vi en
-          AI-l&oslash;sning som genererer konsistente designelementer p&aring;
-          tvers av alle medier og plattformer.
+          Vi huser flinke folk med bred ekspertise på alle omr&aring;der hvor KI
+          har gjort sitt inntog. Det betyr at vi r&aring;dgir og hjelper til med
+          endringer, samt bidrar inn i innovasjonsprosesser der avansert KI tas
+          i bruk.
         </p>
       </SectionIntro>
 
-      <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
-        <FadeIn>
-          <div className="flex flex-col items-start">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-950 text-lg font-bold text-white">
-              1
+      <Container className="mt-12 sm:mt-16 lg:mt-16">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
+          <FadeIn>
+            <div className="flex flex-col items-start">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-950 text-lg font-bold text-white">
+                1
+              </div>
+              <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
+                Hverdagskost
+              </h3>
+              <p className="mt-4 text-base text-neutral-600">
+                Vi bistår med GEO-tilpassing og optimalisering, slik at dere kan
+                ta neste steg etter SEO.
+                <br />
+                <strong>Generative Engine Optimization (GEO)</strong> handler om
+                å optimalisere innhold og digitale løsninger for generative
+                AI-motorer, ikke bare søkemotorer. Vi hjelper din virksomhet med
+                å strukturere, merke og presentere data slik at generative
+                AI-systemer forstår og prioriterer ditt innhold. Dette gir økt
+                synlighet, bedre brukeropplevelser og sikrer at merkevaren din
+                er relevant i en tid der kunstig intelligens former
+                informasjonsflyten.
+              </p>
             </div>
-            <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
-              Designsystem-kartlegging
-            </h3>
-            <p className="mt-4 text-base text-neutral-600">
-              Vi kartlegger deres eksisterende designsystem, merkevareidentitet,
-              fargepaletter og typografi for &aring; forst&aring; deres unike
-              visuelle spr&aring;k.
-            </p>
-          </div>
-        </FadeIn>
+          </FadeIn>
 
-        <FadeIn>
-          <div className="flex flex-col items-start">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-950 text-lg font-bold text-white">
-              2
+          <FadeIn>
+            <div className="flex flex-col items-start">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-950 text-lg font-bold text-white">
+                2
+              </div>
+              <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
+                Innholdsproduksjon
+              </h3>
+              <p className="mt-4 text-base text-neutral-600">
+                V&aring;r AI l&aelig;rer deres spesifikke designprinsipper og
+                merkevareidentitet for &aring; produsere konsistente,
+                merkevareriktige resultater.
+              </p>
             </div>
-            <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
-              AI-modell trening
-            </h3>
-            <p className="mt-4 text-base text-neutral-600">
-              V&aring;r AI l&aelig;rer deres spesifikke designprinsipper og
-              merkevareidentitet for &aring; produsere konsistente,
-              merkevareriktige resultater.
-            </p>
-          </div>
-        </FadeIn>
+          </FadeIn>
 
-        <FadeIn>
-          <div className="flex flex-col items-start">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-950 text-lg font-bold text-white">
-              3
+          <FadeIn>
+            <div className="flex flex-col items-start">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-950 text-lg font-bold text-white">
+                3
+              </div>
+              <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
+                Automasjon
+              </h3>
+              <p className="mt-4 text-base text-neutral-600">
+                Generer komplette designelementer optimalisert for alle deres
+                behov - fra digitale grensesnitt til trykte materialer.
+              </p>
             </div>
-            <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
-              Produksjon & levering
-            </h3>
-            <p className="mt-4 text-base text-neutral-600">
-              Generer komplette designelementer optimalisert for alle deres
-              behov - fra digitale grensesnitt til trykte materialer.
-            </p>
-          </div>
-        </FadeIn>
-      </div>
-    </Container>
+          </FadeIn>
+        </div>
+      </Container>
+    </>
   )
 }
 
