@@ -154,7 +154,7 @@ export function HeroCarousel() {
                   </div>
                 </foreignObject>
               </g>
-              {/* Black offset border for depth */}
+              {/* Black offset border for depth (shadow) */}
               <path
                 d={maskShape.path}
                 fill="none"
@@ -168,6 +168,14 @@ export function HeroCarousel() {
                 fill="none"
                 stroke="rgba(255, 255, 255, 0.3)"
                 strokeWidth="2"
+              />
+              {/* White offset border for depth (highlight) */}
+              <path
+                d={maskShape.path}
+                fill="none"
+                stroke="rgba(255, 255, 255, 0.2)"
+                strokeWidth="2"
+                transform="translate(-4, -4)"
               />
             </svg>
 
