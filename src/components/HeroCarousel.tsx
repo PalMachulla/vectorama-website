@@ -4,7 +4,6 @@ import { useState, useEffect, useId } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FadeIn } from './FadeIn'
 import imageCreative from '@/images/ragdoll.png'
 import imagePopculture from '@/images/popculture.png'
 import imageRabbit from '@/images/rabbit.png'
@@ -27,19 +26,19 @@ const slides = [
     backgroundImage: imagePopculture,
   },
   {
-    id: 'n8n',
-    title: 'Vektorautomasjon',
+    id: 'pictogram',
+    title: 'Piktogrammer',
     description:
-      'Automatiser arbeidsflyten din med kraftige integrasjoner. Vi bygger skreddersydde automatiseringsløsninger som forbinder deres systemer, sparer tid og reduserer manuelle oppgaver.',
+      'Ut i fra et stamsett med ikoner, kan vi utvide ikonhierarkiet med flere nivåer. Fra simple ikoner til komplekse piktogrammer helt i tråd mer designsystemet deres.',
     ctaText: 'Utforsk Vectorama',
     ctaHref: '/contact',
     backgroundImage: imageRabbit,
   },
   {
-    id: 'creative-automation',
-    title: 'Alle flater',
+    id: 'illustration',
+    title: 'Illustrasjoner',
     description:
-      'Ønsker du å se hvor langt du kan nå med video? Skap visuelt stimulerende kampanjer som fanger oppmerksomhet. Enten helt realistiske, eller drømmende og abstrakte. Alt er mulig.',
+      'Selv rike, vektoriserte illustrasjoner kommer ut i deres stil. Enten klare til bruk, eller til redigering for en siste touch av en illustratør eller designer.',
     ctaText: 'Utforsk Vectorama',
     ctaHref: '/contact',
     backgroundImage: imageCreative,
@@ -126,6 +125,18 @@ export function HeroCarousel() {
             <div className="relative flex min-h-[400px] items-center py-12 sm:min-h-[450px] sm:py-16">
               {/* Text Content */}
               <div className="relative z-10 lg:w-1/2">
+                {/* Fixed Vectorama label */}
+                <div className="mb-4">
+                  <span
+                    className={`inline-flex items-center rounded-tr-xl rounded-bl-xl px-3 py-1 text-sm font-medium ${
+                      hasBackground
+                        ? 'bg-neutral-950/10 text-neutral-950'
+                        : 'bg-neutral-200 text-neutral-700'
+                    }`}
+                  >
+                    Nyhet: Vectorama
+                  </span>
+                </div>
                 <h1
                   className={`font-display text-5xl font-medium tracking-tight text-balance sm:text-7xl ${
                     hasBackground ? 'text-neutral-950' : 'text-neutral-950'

@@ -8,6 +8,7 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { HeroCarousel } from '@/components/HeroCarousel'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
+import { SectionPattern } from '@/components/SectionPattern'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
@@ -38,26 +39,22 @@ const clients = [
 
 function Clients() {
   return (
-    <div className="mx-0 mt-24 py-20 sm:mt-32 sm:py-32 lg:mx-0 lg:mt-32">
-      <Container>
-        <FadeInStagger faster>
-          <FadeIn>
-            <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl lg:w-2/3">
-              Hvordan ser automasjon ut s&aring;nn p&aring; tampen av 2025?
-            </h2>
-          </FadeIn>
-          <FadeIn>
-            <p className="mt-6 text-xl text-neutral-600 lg:w-2/3">
-              <i>Marketing automation er bare s&aring; 2015...</i> Vel, ikke
-              helt, det er i h&oslash;yeste grad levende. Det er bare det at i
-              dag kan vi gj&oslash;re s&aring; mye, mye mer. Tenk bare p&aring;
-              hvor langt KI har kommet. Hva? har dere ikke kommet i gang Med KI
-              enn&aring;? Da vil vi snakke med deg.
-            </p>
-          </FadeIn>
-        </FadeInStagger>
-      </Container>
-    </div>
+    <>
+      <SectionIntro
+        title="Hva er Automateket?"
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+        <p>
+          Automakeriet er en konsulenttjeneste som hjelper bedrifter med å
+          implementere og optimalisere KI-løsninger. Vi er spesialister på
+          Generative Engine Optimization (GEO), og hjelper bedrifter med å
+          strukturere, merke og presentere data slik at generative AI-systemer
+          forstår og prioriterer ditt innhold. Dette gir økt synlighet, bedre
+          brukeropplevelser og sikrer at merkevaren din er relevant i en tid der
+          kunstig intelligens former informasjonsflyten.
+        </p>
+      </SectionIntro>
+    </>
   )
 }
 
@@ -266,8 +263,12 @@ export default async function Home() {
           <HeroCarousel />
         </Container>
       </div>
-
-      <Clients />
+      <SectionPattern
+        className="mt-24 sm:mt-32 lg:mt-40"
+        client={{ name: 'Telenor', logo: logoPhobiaDark }}
+      >
+        <div>Hva er Automateket, og hvorfor trenger du det?</div>
+      </SectionPattern>
 
       <ProcessSteps />
 

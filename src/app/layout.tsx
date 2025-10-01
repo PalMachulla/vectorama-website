@@ -7,6 +7,9 @@ export const metadata: Metadata = {
     template: '%s - Automateket',
     default: 'Automateket - KI-drevet automasjon',
   },
+  icons: {
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+  },
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
