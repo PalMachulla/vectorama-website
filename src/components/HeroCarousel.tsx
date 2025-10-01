@@ -109,13 +109,13 @@ export function HeroCarousel() {
               transform: 'translateX(-50%)',
             }}
           >
-            {/* Full background with grayscale + 50% opacity */}
+            {/* Full background with grayscale + 25% opacity */}
             <div className="absolute inset-0">
               <Image
                 src={currentSlide.backgroundImage}
                 alt=""
                 fill
-                className="object-cover opacity-50 grayscale"
+                className="opacity-25 grayscale"
                 priority
               />
             </div>
@@ -123,8 +123,8 @@ export function HeroCarousel() {
             {/* SVG masked version - full color inside mask */}
             <svg
               viewBox={`0 0 ${maskShape.width} ${maskShape.height}`}
-              className="relative h-full w-auto"
-              style={{ maxHeight: '100%' }}
+              className="relative h-full w-auto scale-125"
+              style={{ maxHeight: '125%' }}
             >
               <defs>
                 <clipPath id={`${maskId}-clip`}>
