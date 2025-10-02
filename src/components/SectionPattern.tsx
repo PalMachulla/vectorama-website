@@ -2,7 +2,8 @@ import Image, { type ImageProps } from 'next/image'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-// import { FadeIn } from '@/components/FadeIn'
+import { SectionIntro } from '@/components/SectionIntro'
+import { FadeIn } from '@/components/FadeIn'
 import { GridPattern } from '@/components/GridPattern'
 import illustration1 from '@/images/illustrations/illustration1.png'
 import illustration2 from '@/images/illustrations/illustration2.png'
@@ -17,13 +18,14 @@ interface Illustration {
   caption: string
   placeholder?: string
   image?: ImageProps['src']
+  bgColor: string
 }
 
 // Configuration data
 const sectionConfig = {
   label: 'Smertelindring',
   description:
-    'Her kan du se eksempler på våre designelementer og illustrasjoner som vi har utviklet for våre kunder.',
+    'Vel, du trenger det først og fremst fordi du føler du må komme i gang med KI. Og samtidig føler du det er vanskelig å skille signalet i fra støyen. Du føler simpelthen du trenger å komme i kontakt med noen som kan veilede deg på en god måte, slik at du får den beste løsningen for deg og ditt selskap. Under er det noen områder du kan se litt nærmere på.',
   illustrations: [
     {
       id: 'illustration-1',
@@ -31,6 +33,7 @@ const sectionConfig = {
       caption: 'Alt om GEO (KI-Søk)',
       placeholder: 'Illustration 1',
       image: illustration1,
+      bgColor: 'bg-pink-100',
     },
     {
       id: 'illustration-2',
@@ -38,6 +41,7 @@ const sectionConfig = {
       caption: 'Visuell Kommunikasjon',
       placeholder: 'Illustration 2',
       image: illustration2,
+      bgColor: 'bg-blue-100',
     },
     {
       id: 'illustration-3',
@@ -45,6 +49,7 @@ const sectionConfig = {
       caption: 'KI Strategi',
       placeholder: 'Illustration 3',
       image: illustration3,
+      bgColor: 'bg-green-100',
     },
     {
       id: 'illustration-4',
@@ -52,6 +57,7 @@ const sectionConfig = {
       caption: 'Agentsystemer',
       placeholder: 'Illustration 4',
       image: illustration4,
+      bgColor: 'bg-purple-100',
     },
     {
       id: 'illustration-5',
@@ -59,6 +65,7 @@ const sectionConfig = {
       caption: 'Generell Automasjon',
       placeholder: 'Illustration 5',
       image: illustration5,
+      bgColor: 'bg-yellow-100',
     },
   ],
 }
@@ -66,24 +73,32 @@ const sectionConfig = {
 // Presentation component for individual illustration
 function IllustrationCard({ illustration }: { illustration: Illustration }) {
   return (
-    <figure className="text-center">
-      <div className="mb-4 flex aspect-square items-center justify-center overflow-hidden rounded-lg bg-neutral-100">
-        {illustration.image ? (
-          <Image
-            src={illustration.image}
-            alt={illustration.title}
-            width={300}
-            height={300}
-            className="h-full w-full object-cover"
-          />
-        ) : (
-          <span className="text-neutral-400">{illustration.placeholder}</span>
-        )}
-      </div>
-      <figcaption className="text-sm text-neutral-600">
-        {illustration.caption}
-      </figcaption>
-    </figure>
+    <FadeIn>
+      <figure className="text-center">
+        <div
+          className={`mb-4 flex aspect-square items-center justify-center overflow-hidden ${illustration.bgColor}`}
+          style={{
+            clipPath: 'polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)',
+            borderRadius: '12px',
+          }}
+        >
+          {illustration.image ? (
+            <Image
+              src={illustration.image}
+              alt={illustration.title}
+              width={300}
+              height={300}
+              className="h-full w-full object-cover"
+            />
+          ) : (
+            <span className="text-neutral-400">{illustration.placeholder}</span>
+          )}
+        </div>
+        <figcaption className="text-sm text-neutral-600">
+          {illustration.caption}
+        </figcaption>
+      </figure>
+    </FadeIn>
   )
 }
 
@@ -104,20 +119,20 @@ export function SectionPattern({
         className,
       )}
     >
+      <GridPattern
+        className="absolute inset-0 h-full w-full [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_70%)] fill-neutral-100 stroke-neutral-950/5"
+        yOffset={-96}
+      />
       <Container>
         <div className="mx-auto max-w-6xl">
-          {/* Header and Ingress */}
-          <div className="mb-12 text-center">
-            <span className="inline-flex items-center rounded-tr-xl rounded-bl-xl bg-neutral-950/10 px-3 py-1 text-sm font-medium text-neutral-950">
-              {sectionConfig.label}
-            </span>
-            <div className="my-12 font-display font-medium tracking-tight text-neutral-950 sm:text-4xl md:text-6xl">
-              {children}
-            </div>
-            <p className="mx-auto max-w-2xl text-lg text-neutral-600">
-              {sectionConfig.description}
-            </p>
-          </div>
+          {/* Use SectionIntro for consistent styling */}
+          <SectionIntro
+            eyebrow={sectionConfig.label}
+            title={children as string}
+            className="mb-12"
+          >
+            {sectionConfig.description}
+          </SectionIntro>
 
           {/* Illustrations Grid */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
