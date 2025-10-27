@@ -23,10 +23,10 @@ function BlockquoteWithImage({
         className,
       )}
     >
-      <blockquote className="col-span-2 text-xl/7 text-neutral-600 sm:col-span-7 sm:col-start-6 sm:row-start-2">
+      <blockquote className="col-span-2 text-xl/7 text-neutral-400 sm:col-span-7 sm:col-start-6 sm:row-start-2">
         {typeof children === 'string' ? <p>{children}</p> : children}
       </blockquote>
-      <div className="col-start-1 row-start-2 overflow-hidden rounded-xl bg-neutral-100 sm:col-span-5 sm:row-span-full sm:rounded-3xl">
+      <div className="col-start-1 row-start-2 overflow-hidden rounded-xl bg-neutral-800 sm:col-span-5 sm:row-span-full sm:rounded-3xl">
         <Image
           alt=""
           {...image}
@@ -34,7 +34,7 @@ function BlockquoteWithImage({
           className="h-12 w-12 object-cover grayscale sm:aspect-7/9 sm:h-auto sm:w-full"
         />
       </div>
-      <figcaption className="text-sm text-neutral-950 sm:col-span-7 sm:row-start-3 sm:text-base">
+      <figcaption className="text-sm text-white sm:col-span-7 sm:row-start-3 sm:text-base">
         <span className="font-semibold">{author.name}</span>
         <span className="hidden font-semibold sm:inline">, </span>
         <br className="sm:hidden" />
@@ -54,13 +54,16 @@ function BlockquoteWithoutImage({
   className?: string
 }) {
   return (
-    <Border position="left" className={clsx('pl-8', className)}>
-      <figure className="text-sm">
-        <blockquote className="text-neutral-600 *:relative [&>:first-child]:before:absolute [&>:first-child]:before:right-full [&>:first-child]:before:content-['“'] [&>:last-child]:after:content-['”']">
+    <Border position="left" className={clsx('pl-8', className)} invert>
+      <figure className="font-mono text-sm">
+        <blockquote className="text-neutral-400 *:relative [&>:first-child]:before:absolute [&>:first-child]:before:right-full [&>:first-child]:before:text-[#BBFFA8] [&>:first-child]:before:content-['//_'] [&>:last-child]:after:text-[#BBFFA8]">
           {typeof children === 'string' ? <p>{children}</p> : children}
         </blockquote>
-        <figcaption className="mt-6 font-semibold text-neutral-950">
-          {author.name}, {author.role}
+        <figcaption className="mt-6 font-mono font-semibold text-white">
+          <span className="text-[#FF00EE]">{'// '}</span>
+          <span className="text-[#009DFF]">{author.name}</span>
+          <span className="text-neutral-500">, </span>
+          <span className="text-neutral-400">{author.role}</span>
         </figcaption>
       </figure>
     </Border>

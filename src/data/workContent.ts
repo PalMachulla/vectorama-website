@@ -1,85 +1,114 @@
-import illustrationfanout from '@/images/illustrations/fanout.png'
-import illustration3 from '@/images/illustrations/illustration3.png'
-import illustrationtopology from '@/images/illustrations/topology.png'
+import illustration1 from '@/images/illustrations/illustration1.png'
+import illustration2 from '@/images/illustrations/illustration2.png'
+import illustration5 from '@/images/illustrations/illustration5.png'
 
 export const workSections = [
   {
-    id: 'geo-ki-search',
-    title: 'GEO og KI-søk',
-    image: { src: illustrationfanout, alt: 'GEO og KI-søk illustrasjon' },
+    id: 'vesen',
+    title: 'VESEN',
+    image: { src: illustration1, alt: 'VESEN platform illustration' },
     content: {
       description:
-        'ChatGPT vifter ut hundrevis av søk for så svare opp enkel dialog. Hvordan påvirker det trafikken din? Eller, hvordan blir du søkt opp dersom en bruker snakker med Claude om noe som angår ditt produkt eller dine tjenester? Vi har ekspertisen som kan hjelpe deg til å være synlig, uten at du drukner i robot-trafikk på sidene dine.',
+        'A new platform for entertainment, mixing gaming with rich media experiences into true agentic omni experiences. VESEN reimagines how users interact with content, blending immersive gameplay, dynamic storytelling, and AI-driven personalization into a seamless experience.',
       buttons: [
         {
-          text: 'Last ned dokumentasjon',
+          text: 'Explore platform',
           href: '/contact',
           variant: 'primary' as const,
         },
         {
-          text: 'Ta kontakt for mer informasjon',
+          text: 'See demo',
           href: '/contact',
           variant: 'secondary' as const,
         },
       ],
-    },
-  },
-  {
-    id: 'vectorama',
-    title: 'Vectorama - AI-drevet Vektorisering',
-    image: { src: illustration3, alt: 'Vectorama illustrasjon' },
-    content: {
-      description:
-        'Transformerer rasterbilder til perfekte vektorgrafier ved hjelp av avansert AI. Generer skalerbare designelementer som bevarer merkevareidentitet på tvers av alle plattformer.',
       metrics: [
-        { value: '90%', label: 'Tidsbesparelse' },
-        { value: '10K+', label: 'Assets generert' },
-        { value: '100%', label: 'Kvalitet' },
+        { value: 'Active', label: 'Status' },
+        { value: '2025', label: 'Launch' },
+        { value: 'Omni', label: 'Experience' },
       ],
     },
   },
   {
-    id: 'panorama',
-    title: 'Panorama - Topologigenerert visualisering',
-    image: { src: illustrationtopology, alt: 'panorama illustrasjon' },
+    id: 'publo',
+    title: 'Publo',
+    image: { src: illustration2, alt: 'Publo platform illustration' },
     content: {
       description:
-        'Implementerer kraftige automatiseringsworkflows med N8N som kobler sammen alle dine verktøy og tjenester. Fra enkel datasynkronisering til komplekse forretningsprosesser.',
+        'Set to revolutionize publishing houses with AI-driven content creation and distribution workflows. Publo empowers publishers to scale their content operations, maintain quality, and reach audiences across multiple channels with intelligent automation.',
+      buttons: [
+        {
+          text: 'Learn more',
+          href: '/contact',
+          variant: 'primary' as const,
+        },
+        {
+          text: 'Request access',
+          href: '/contact',
+          variant: 'secondary' as const,
+        },
+      ],
       metrics: [
-        { value: '85%', label: 'Tidsbesparelse' },
-        { value: '150+', label: 'Workflows' },
-        { value: '50+', label: 'Integrasjoner' },
+        { value: 'Active', label: 'Status' },
+        { value: '10x', label: 'Speed increase' },
+        { value: 'AI-first', label: 'Workflow' },
+      ],
+    },
+  },
+  {
+    id: 'canary',
+    title: 'Canary',
+    image: { src: illustration5, alt: 'Canary platform illustration' },
+    content: {
+      description:
+        'Agentic management consulting for companies strongly adapted for AI-first business transformation. Canary provides strategic guidance and hands-on implementation support to help organizations embrace AI-driven operating models and unlock exponential growth.',
+      buttons: [
+        {
+          text: 'Book consultation',
+          href: '/contact',
+          variant: 'primary' as const,
+        },
+        {
+          text: 'View framework',
+          href: '/contact',
+          variant: 'secondary' as const,
+        },
+      ],
+      metrics: [
+        { value: 'Active', label: 'Status' },
+        { value: 'Agentic', label: 'Approach' },
+        { value: 'AI-first', label: 'Transformation' },
       ],
     },
   },
 ]
 
 export const pageIntro = {
-  eyebrow: 'Tjenester',
-  title: 'En pallett av muligheter',
+  eyebrow: 'Services',
+  title: 'A palette of possibilities',
   description:
-    'Vi hjelper deg med en rekke løsninger som er tilpasest dine behov. Det være seg kreativ automasjon av spesialiserte visuelle artefakter, eller multi-agentiske rammeverk som tjener flere forretningsområder i din bedrift. Nedenfor ser du et knippe løsninger som vi har implementert for våre kunder.',
+    'We help you with a range of solutions tailored to your needs. Whether it is creative automation of specialized visual artifacts, or multi-agent frameworks that serve multiple business areas in your company. Below you can see a selection of solutions we have implemented for our customers.',
 }
 
 export const caseStudiesIntro = {
-  title: 'Prosjekter',
+  title: 'Projects',
   description:
-    'Eksempler på hvordan vi har implementert automatiseringsløsninger på tvers av ulike domener - fra designautomatisering til intelligente workflow-systemer og avanserte AI-agenter.',
+    'Examples of how we have implemented automation solutions across different domains - from design automation to intelligent workflow systems and advanced AI agents.',
 }
 
 export const testimonial = {
-  text: 'Automateket har transformert hvordan vi jobber. Fra designautomatisering med Vectorama til intelligente workflows med N8N og AI-agenter - vi har spart utallige timer og oppnådd en konsistens vi ikke trodde var mulig.',
+  text: "AIAKAKI has transformed how we work. From design automation with AIAKAKI to intelligent workflows with N8N and AI agents - we have saved countless hours and achieved a consistency we didn't think was possible.",
   client: {
-    name: 'Fornøyd kunde',
+    name: 'Satisfied customer',
     logo: 'logoPhobia', // Reference to logo import
   },
 }
 
 export const clientsSection = {
-  title: 'Du er i godt selskap',
+  title: 'You are in good company',
   clients: [
     ['Telenor', 'logoPhobia'],
-    ['Dentsu', 'logoFamilyFund'],
+    ['AIAKAKI', 'logoFamilyFund'],
     ['Merkle', 'logoUnseal'],
     ['AI Solutions', 'logoMailSmirk'],
     ['Tech Brands', 'logoHomeWork'],

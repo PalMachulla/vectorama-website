@@ -43,15 +43,15 @@ function Navigation() {
       <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
-            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+            <div className="font-display text-sm font-semibold tracking-wider text-white">
               {section.title}
             </div>
-            <ul role="list" className="mt-4 text-sm text-neutral-700">
+            <ul role="list" className="mt-4 text-sm text-neutral-400">
               {section.links.map((link, linkIndex) => (
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-neutral-950"
+                    className="transition hover:text-[#009DFF]"
                   >
                     {link.title}
                   </Link>
@@ -81,12 +81,11 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function NewsletterForm() {
   return (
     <form className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
+      <h2 className="font-display text-sm font-semibold tracking-wider text-white">
+        AIAKAKI Newsletter
       </h2>
-      <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+      <p className="mt-4 text-sm text-neutral-400">
+        Subscribe to our newsletter to get the latest from AIAKAKI.
       </p>
       <div className="relative mt-6">
         <input
@@ -94,15 +93,17 @@ function NewsletterForm() {
           placeholder="Email address"
           autoComplete="email"
           aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pr-20 pl-6 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-hidden"
+          className="block w-full rounded-2xl border border-neutral-700 bg-transparent py-4 pr-20 pl-6 text-base/6 text-white ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-[#009DFF] focus:ring-[#009DFF]/20 focus:outline-hidden"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <button
             type="submit"
             aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
+            className="group relative flex aspect-square h-full items-center justify-center rounded-xl border border-[#009DFF]/60 bg-black text-[#009DFF] transition-all before:absolute before:inset-0 before:-translate-x-0.5 before:-translate-y-0.5 before:rounded-xl before:border before:border-[#FF00EE]/50 before:transition-all after:absolute after:inset-0 after:translate-x-0.5 after:translate-y-0.5 after:rounded-xl after:border after:border-[#BBFFA8]/40 after:transition-all hover:bg-neutral-950 hover:before:-translate-x-1 hover:before:-translate-y-1 hover:after:translate-x-1 hover:after:translate-y-1"
           >
-            <ArrowIcon className="w-4" />
+            <span className="relative z-10">
+              <ArrowIcon className="w-4" />
+            </span>
           </button>
         </div>
       </div>
@@ -120,12 +121,12 @@ export function Footer() {
             <NewsletterForm />
           </div>
         </div>
-        <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+        <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-white/10 pt-12">
           <Link href="/" aria-label="Home">
-            <Logo className="h-8" fillOnHover />
+            <Logo className="h-6" fillOnHover />
           </Link>
-          <p className="text-sm text-neutral-700">
-            © Dentsu {new Date().getFullYear()}
+          <p className="text-sm text-neutral-400">
+            © AIAKAKI {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

@@ -8,7 +8,7 @@ export function SectionIntro({
   eyebrow,
   children,
   smaller = false,
-  invert = false,
+  invert = true,
   ...props
 }: Omit<
   React.ComponentPropsWithoutRef<typeof Container>,
@@ -28,10 +28,15 @@ export function SectionIntro({
             <>
               <span
                 className={clsx(
-                  'mb-6 block font-display text-base font-semibold',
-                  invert ? 'text-white' : 'text-neutral-950',
+                  'mb-6 block font-mono text-xs font-semibold tracking-wider uppercase',
+                  invert ? 'text-[#009DFF]' : 'text-neutral-950',
                 )}
               >
+                <span
+                  className={invert ? 'text-[#BBFFA8]' : 'text-neutral-600'}
+                >
+                  {'// '}
+                </span>
                 {eyebrow}
               </span>
               <span className="sr-only"> - </span>
@@ -52,8 +57,8 @@ export function SectionIntro({
         {children && (
           <div
             className={clsx(
-              'mt-6 text-xl',
-              invert ? 'text-neutral-300' : 'text-neutral-600',
+              'mt-6 font-mono text-base leading-relaxed',
+              invert ? 'text-neutral-400' : 'text-neutral-600',
             )}
           >
             {children}

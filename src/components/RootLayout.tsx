@@ -30,8 +30,14 @@ const RootLayoutContext = createContext<{
 function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z" />
-      <path d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z" />
+      <path
+        d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z"
+        strokeWidth="2"
+      />
+      <path
+        d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z"
+        strokeWidth="2"
+      />
     </svg>
   )
 }
@@ -39,7 +45,7 @@ function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="M2 6h20v2H2zM2 16h20v2H2z" />
+      <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
     </svg>
   )
 }
@@ -71,19 +77,19 @@ function Header({
           onMouseLeave={() => setLogoHovered(false)}
         >
           <Logomark
-            className="h-[1.33rem] sm:hidden"
+            className="h-8 sm:hidden"
             invert={invert}
             filled={logoHovered}
           />
           <Logo
-            className="hidden h-[1.33rem] sm:block"
+            className="hidden h-8 sm:block"
             invert={invert}
             filled={logoHovered}
           />
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
-            Kontakt oss
+            Contact Us
           </Button>
           <button
             ref={toggleRef}
@@ -92,17 +98,18 @@ function Header({
             aria-expanded={expanded ? 'true' : 'false'}
             aria-controls={panelId}
             className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
-              invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
+              'group relative -m-2.5 rounded-lg border bg-black p-2.5 transition-all',
+              'before:absolute before:inset-0 before:-translate-x-0.5 before:-translate-y-0.5 before:rounded-lg before:border before:transition-all',
+              'after:absolute after:inset-0 after:translate-x-0.5 after:translate-y-0.5 after:rounded-lg after:border after:transition-all',
+              'hover:bg-neutral-950 hover:before:-translate-x-1 hover:before:-translate-y-1 hover:after:translate-x-1 hover:after:translate-y-1',
+              'border-[#009DFF]/60 before:border-[#FF00EE]/40 after:border-[#BBFFA8]/30',
             )}
             aria-label="Toggle navigation"
           >
             <Icon
               className={clsx(
-                'h-6 w-6',
-                invert
-                  ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
+                'relative z-10 h-6 w-6 transition-colors',
+                'fill-[#009DFF] group-hover:fill-[#BBFFA8]',
               )}
             />
           </button>
@@ -135,7 +142,7 @@ function NavigationItem({
       className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
     >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+      <span className="absolute inset-y-0 -z-10 w-screen bg-[#009DFF]/10 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
     </Link>
   )
 }
@@ -144,12 +151,12 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Cases</NavigationItem>
-        <NavigationItem href="/about">Om Oss</NavigationItem>
+        <NavigationItem href="/work">Solutions</NavigationItem>
+        <NavigationItem href="/about">About Us</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Prosess</NavigationItem>
-        <NavigationItem href="/blog">Blogg</NavigationItem>
+        <NavigationItem href="/process">Process</NavigationItem>
+        <NavigationItem href="/blog">Blog</NavigationItem>
       </NavigationRow>
     </nav>
   )
@@ -263,14 +270,14 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       <motion.div
         layout
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
+        className="relative flex flex-auto overflow-hidden bg-neutral-950 pt-14"
       >
         <motion.div
           layout
           className="relative isolate flex w-full flex-col pt-9"
         >
           <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full mask-[linear-gradient(to_bottom_left,white_40%,transparent_50%)] fill-neutral-50 stroke-neutral-950/5"
+            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full mask-[linear-gradient(to_bottom_left,black_40%,transparent_50%)] fill-neutral-900"
             yOffset={-96}
             interactive
           />

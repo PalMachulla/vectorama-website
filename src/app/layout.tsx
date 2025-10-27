@@ -4,8 +4,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Automateket',
-    default: 'Automateket - KI-drevet automasjon',
+    template: '%s - AIAKAKI',
+    default: 'AIAKAKI - AI-driven automation',
   },
   icons: {
     icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],

@@ -28,7 +28,7 @@ import { RootLayout } from '@/components/RootLayout'
 // Updated clients to reflect Vectorama's partnerships
 const clients = [
   ['Telenor', logoPhobiaLight], // Using existing logo as placeholder for Telenor
-  ['Dentsu', logoFamilyFund],
+  ['AIAKAKI', logoFamilyFund],
   ['Merkle', logoUnseal],
   ['AI Solutions', logoMailSmirk],
   ['Tech Brands', logoHomeWork],
@@ -41,17 +41,17 @@ function Clients() {
   return (
     <>
       <SectionIntro
-        title="Hva er Automateket?"
+        title="What is AIAKAKI?"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Automakeriet er en konsulenttjeneste som hjelper bedrifter med å
-          implementere og optimalisere KI-løsninger. Vi er spesialister på
-          Generative Engine Optimization (GEO), og hjelper bedrifter med å
-          strukturere, merke og presentere data slik at generative AI-systemer
-          forstår og prioriterer ditt innhold. Dette gir økt synlighet, bedre
-          brukeropplevelser og sikrer at merkevaren din er relevant i en tid der
-          kunstig intelligens former informasjonsflyten.
+          AIAKAKI is a consulting service that helps businesses implement and
+          optimize AI solutions. We specialize in Generative Engine Optimization
+          (GEO), helping businesses structure, label and present data so that
+          generative AI systems understand and prioritize your content. This
+          provides increased visibility, better user experiences and ensures
+          that your brand is relevant in an era where artificial intelligence
+          shapes the flow of information.
         </p>
       </SectionIntro>
     </>
@@ -66,23 +66,23 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-        title="Noe av det arbeidet vi har stablet på beina over tid"
+        title="Some of the work we have accomplished over time"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Automasjon kan v&aelig;re s&aring; langt. Fra enkle flows til mer
-          avanserte agent-oppsett. Vi hjelper deg med sm&aring; eller store
-          prosjekter som passer til ditt behov og din bedrift..
+          Automation can go far. From simple flows to more advanced agent
+          setups. We help you with small or large projects that fit your needs
+          and your business.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
             <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+              <article className="relative flex w-full flex-col rounded-lg border border-[#009DFF]/30 bg-neutral-950 p-6 transition hover:border-[#009DFF]/50 hover:bg-neutral-900 sm:p-8">
                 <h3>
                   <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
+                    <span className="absolute inset-0 rounded-lg" />
                     <Image
                       src={caseStudy.logo}
                       alt={caseStudy.client}
@@ -91,22 +91,22 @@ function CaseStudies({
                     />
                   </Link>
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
+                <p className="mt-6 flex gap-x-2 font-mono text-sm text-neutral-400">
                   <time
                     dateTime={caseStudy.date.split('-')[0]}
-                    className="font-semibold"
+                    className="font-semibold text-[#009DFF]"
                   >
                     {caseStudy.date.split('-')[0]}
                   </time>
-                  <span className="text-neutral-300" aria-hidden="true">
+                  <span className="text-neutral-600" aria-hidden="true">
                     /
                   </span>
-                  <span>Case study</span>
+                  <span className="text-neutral-500">Case study</span>
                 </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                <p className="mt-6 font-display text-2xl font-semibold text-white">
                   {caseStudy.title}
                 </p>
-                <p className="mt-4 text-base text-neutral-600">
+                <p className="mt-4 font-mono text-base leading-relaxed text-neutral-400">
                   {caseStudy.description}
                 </p>
               </article>
@@ -119,52 +119,82 @@ function CaseStudies({
 }
 
 function Services() {
+  const solutions = [
+    {
+      name: 'VESEN',
+      description:
+        'A new platform for entertainment, mixing gaming with rich media experiences into true agentic omni experiences.',
+      status: 'active',
+      color: '#009DFF',
+    },
+    {
+      name: 'Publo',
+      description:
+        'Set to revolutionize publishing houses with AI-driven content creation and distribution workflows.',
+      status: 'active',
+      color: '#BBFFA8',
+    },
+    {
+      name: 'Canary',
+      description:
+        'Agentic management consulting for companies strongly adapted for AI-first business transformation.',
+      status: 'active',
+      color: '#FF00EE',
+    },
+  ]
+
   return (
     <>
       <SectionIntro
-        eyebrow="Generativ AI + designerekspertise"
-        title="Komplett designsystem-automatisering"
+        eyebrow="Solutions"
+        title="Platforms & Products"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Vi transformerer designprosesser ved &aring; kombinere avansert
-          AI-teknologi med dypg&aring;ende forst&aring;else av
-          merkevareidentitet, og skaper komplette designsystemer som skalerer
-          p&aring; tvers av alle plattformer.
+          We build platforms that push the boundaries of what&apos;s possible
+          with AI. From entertainment to publishing to consulting - each
+          solution represents a leap forward in agentic systems.
         </p>
       </SectionIntro>
       <Container className="mt-16">
-        <div className="lg:flex lg:items-center lg:justify-end">
-          <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-135 flex-none lg:w-180">
-              <StylizedImage
-                src={imageLaptop}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
+        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          {solutions.map((solution) => (
+            <FadeIn key={solution.name}>
+              <div
+                className="relative flex h-full flex-col rounded-lg border bg-neutral-950 p-8"
+                style={{ borderColor: `${solution.color}40` }}
+              >
+                <div
+                  className="mb-6 font-mono text-xs tracking-wider uppercase"
+                  style={{ color: solution.color }}
+                >
+                  <span className="text-neutral-500">{'$ '}</span>
+                  {solution.status}
+                </div>
+                <h3 className="font-mono text-2xl font-bold text-white">
+                  <span className="text-[#FF00EE]">{'const '}</span>
+                  <span style={{ color: solution.color }}>{solution.name}</span>
+                  <span className="text-neutral-400">{' = {'}</span>
+                </h3>
+                <p className="mt-6 flex-1 font-mono text-base leading-relaxed text-neutral-400">
+                  {solution.description}
+                </p>
+                <div className="mt-6 font-mono text-neutral-400">{'};'}</div>
+                <div
+                  className="absolute -right-px -bottom-px h-16 w-16 opacity-20"
+                  style={{
+                    background: `radial-gradient(circle at bottom right, ${solution.color}, transparent)`,
+                  }}
+                />
+              </div>
             </FadeIn>
-          </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-132 lg:pl-4">
-            <ListItem title="Designsystem-analyse">
-              Vi analyserer deres eksisterende designsystem, merkevareidentitet
-              og visuelle retningslinjer for &aring; skape en skreddersydd
-              AI-modell.
-            </ListItem>
-            <ListItem title="Komplett elementbibliotek">
-              Generer ikoner, piktogrammer, illustrasjoner og
-              datavisualiseringselementer - alt fra app-ikoner til
-              PowerPoint-illustrasjoner og plakatdesign.
-            </ListItem>
-            <ListItem title="Plattformtilpasning">
-              Automatisk optimalisering for web, mobile apper, print,
-              presentasjoner og sosiale medier med korrekt oppl&oslash;sning og
-              format.
-            </ListItem>
-            <ListItem title="Kvalitetssikring">
-              Ekspertdesignere kurerer og validerer alle AI-genererte elementer
-              for &aring; sikre h&oslash;yeste kvalitet og merkevareintegritet.
-            </ListItem>
-          </List>
+          ))}
+        </FadeInStagger>
+        <div className="mt-12 text-center">
+          <p className="font-mono text-sm text-neutral-500">
+            <span className="text-[#BBFFA8]">{'// '}</span>
+            More solutions coming soon...
+          </p>
         </div>
       </Container>
     </>
@@ -174,72 +204,219 @@ function Services() {
 function ProcessSteps() {
   return (
     <>
-      <SectionIntro
-        title="Noe av det vi gjør i dag"
-        className="mt-12 sm:mt-16 lg:mt-16"
-      >
+      <SectionIntro title="Our Approach" className="mt-12 sm:mt-16 lg:mt-16">
         <p>
-          Vi huser flinke folk med bred ekspertise på alle omr&aring;der hvor KI
-          har gjort sitt inntog. Det betyr at vi r&aring;dgir og hjelper til med
-          endringer, samt bidrar inn i innovasjonsprosesser der avansert KI tas
-          i bruk.
+          We house talented people with broad expertise in all areas where AI
+          has made its mark. This means we advise and help with changes, as well
+          as contribute to innovation processes where advanced AI is put to use.
         </p>
       </SectionIntro>
 
       <Container className="mt-12 sm:mt-16 lg:mt-16">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <FadeIn>
-            <div className="flex flex-col items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-950 text-lg font-bold text-white">
-                1
+            <div className="flex w-full flex-col items-start">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#009DFF] font-mono text-sm font-bold text-white">
+                01
               </div>
-              <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
-                Hverdagskost
+              <h3 className="mt-6 font-display text-xl font-semibold text-white">
+                Core Philosophy
               </h3>
-              <p className="mt-4 text-base text-neutral-600">
-                Vi bistår med GEO-tilpassing og optimalisering, slik at dere kan
-                ta neste steg etter SEO.
-                <br />
-                <strong>Generative Engine Optimization (GEO)</strong> handler om
-                å optimalisere innhold og digitale løsninger for generative
-                AI-motorer, ikke bare søkemotorer. Vi hjelper din virksomhet med
-                å strukturere, merke og presentere data slik at generative
-                AI-systemer forstår og prioriterer ditt innhold. Dette gir økt
-                synlighet, bedre brukeropplevelser og sikrer at merkevaren din
-                er relevant i en tid der kunstig intelligens former
-                informasjonsflyten.
-              </p>
+              <div className="mt-4 w-full rounded-lg bg-neutral-950/50 p-4 font-mono text-xs leading-relaxed">
+                <div className="text-neutral-500">
+                  <span className="text-[#FF00EE]">const</span>{' '}
+                  <span className="text-[#009DFF]">growthCurve</span>{' '}
+                  <span className="text-neutral-400">=</span>{' '}
+                  <span className="text-[#BBFFA8]">
+                    &apos;exponential&apos;
+                  </span>
+                  <span className="text-neutral-400">;</span>
+                </div>
+                <div className="mt-1 text-neutral-500">
+                  <span className="text-[#FF00EE]">let</span>{' '}
+                  <span className="text-[#009DFF]">innovation</span>{' '}
+                  <span className="text-neutral-400">=</span>{' '}
+                  <span className="text-[#BBFFA8]">true</span>
+                  <span className="text-neutral-400">;</span>
+                </div>
+                <div className="mt-3 text-neutral-600">
+                  <span className="text-neutral-500">{'// '}</span>We recognize
+                  the exponential
+                </div>
+                <div className="text-neutral-600">
+                  <span className="text-neutral-500">{'// '}</span>nature of AI
+                  advancement
+                </div>
+                <div className="mt-3 text-neutral-500">
+                  <span className="text-[#FF00EE]">if</span>{' '}
+                  <span className="text-neutral-400">(</span>
+                  <span className="text-[#009DFF]">growthCurve</span>{' '}
+                  <span className="text-neutral-400">===</span>{' '}
+                  <span className="text-[#BBFFA8]">
+                    &apos;exponential&apos;
+                  </span>
+                  <span className="text-neutral-400">) {'{'}</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">adapt</span>
+                  <span className="text-neutral-400">(</span>
+                  <span className="text-[#BBFFA8]">
+                    &apos;continuously&apos;
+                  </span>
+                  <span className="text-neutral-400">);</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">embrace</span>
+                  <span className="text-neutral-400">(</span>
+                  <span className="text-[#BBFFA8]">&apos;change&apos;</span>
+                  <span className="text-neutral-400">);</span>
+                </div>
+                <div className="text-neutral-400">{'}'}</div>
+              </div>
             </div>
           </FadeIn>
 
           <FadeIn>
-            <div className="flex flex-col items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-950 text-lg font-bold text-white">
-                2
+            <div className="flex w-full flex-col items-start">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#BBFFA8] font-mono text-sm font-bold text-neutral-950">
+                02
               </div>
-              <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
-                Innholdsproduksjon
+              <h3 className="mt-6 font-display text-xl font-semibold text-white">
+                Agentic First
               </h3>
-              <p className="mt-4 text-base text-neutral-600">
-                V&aring;r AI l&aelig;rer deres spesifikke designprinsipper og
-                merkevareidentitet for &aring; produsere konsistente,
-                merkevareriktige resultater.
-              </p>
+              <div className="mt-4 w-full rounded-lg bg-neutral-950/50 p-4 font-mono text-xs leading-relaxed">
+                <div className="text-neutral-500">
+                  <span className="text-[#FF00EE]">interface</span>{' '}
+                  <span className="text-[#009DFF]">NextLeap</span>{' '}
+                  <span className="text-neutral-400">{'{'}</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">technology</span>
+                  <span className="text-neutral-400">:</span>{' '}
+                  <span className="text-[#BBFFA8]">&apos;agentic&apos;</span>
+                  <span className="text-neutral-400">;</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">autonomous</span>
+                  <span className="text-neutral-400">:</span>{' '}
+                  <span className="text-[#BBFFA8]">true</span>
+                  <span className="text-neutral-400">;</span>
+                </div>
+                <div className="text-neutral-400">{'}'}</div>
+                <div className="mt-3 text-neutral-600">
+                  <span className="text-neutral-500">{'// '}</span>Anchored in
+                  next-gen AI
+                </div>
+                <div className="mt-3 text-neutral-500">
+                  <span className="text-[#FF00EE]">return</span>{' '}
+                  <span className="text-[#009DFF]">systems</span>
+                  <span className="text-neutral-400">.</span>
+                  <span className="text-[#009DFF]">map</span>
+                  <span className="text-neutral-400">(</span>
+                  <span className="text-[#009DFF]">agent</span>{' '}
+                  <span className="text-[#FF00EE]">=&gt;</span>{' '}
+                  <span className="text-neutral-400">{'{'}</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">agent</span>
+                  <span className="text-neutral-400">.</span>
+                  <span className="text-[#009DFF]">learn</span>
+                  <span className="text-neutral-400">();</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">agent</span>
+                  <span className="text-neutral-400">.</span>
+                  <span className="text-[#009DFF]">decide</span>
+                  <span className="text-neutral-400">();</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">agent</span>
+                  <span className="text-neutral-400">.</span>
+                  <span className="text-[#009DFF]">execute</span>
+                  <span className="text-neutral-400">();</span>
+                </div>
+                <div className="text-neutral-400">{'});'}</div>
+              </div>
             </div>
           </FadeIn>
 
           <FadeIn>
-            <div className="flex flex-col items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-neutral-950 text-lg font-bold text-white">
-                3
+            <div className="flex w-full flex-col items-start">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#FF00EE] font-mono text-sm font-bold text-white">
+                03
               </div>
-              <h3 className="mt-6 font-display text-xl font-semibold text-neutral-950">
-                Automasjon
+              <h3 className="mt-6 font-display text-xl font-semibold text-white">
+                Innovated Imagination
               </h3>
-              <p className="mt-4 text-base text-neutral-600">
-                Generer komplette designelementer optimalisert for alle deres
-                behov - fra digitale grensesnitt til trykte materialer.
-              </p>
+              <div className="mt-4 w-full rounded-lg bg-neutral-950/50 p-4 font-mono text-xs leading-relaxed">
+                <div className="text-neutral-500">
+                  <span className="text-[#FF00EE]">class</span>{' '}
+                  <span className="text-[#009DFF]">ThoughtLeader</span>{' '}
+                  <span className="text-neutral-400">{'{'}</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">crossDomain</span>
+                  <span className="text-neutral-400">:</span>{' '}
+                  <span className="text-[#BBFFA8]">Knowledge</span>
+                  <span className="text-neutral-400">[];</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">reasoning</span>
+                  <span className="text-neutral-400">:</span>{' '}
+                  <span className="text-[#BBFFA8]">&apos;inductive&apos;</span>
+                  <span className="text-neutral-400">;</span>
+                </div>
+                <div className="mt-3 text-neutral-600">
+                  <span className="text-neutral-500">{'  // '}</span>Creativity
+                  + Logic
+                </div>
+                <div className="mt-2 text-neutral-500">
+                  {'  '}
+                  <span className="text-[#009DFF]">innovate</span>
+                  <span className="text-neutral-400">() {'{'}</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'    '}
+                  <span className="text-[#FF00EE]">const</span>{' '}
+                  <span className="text-[#009DFF]">ideas</span>{' '}
+                  <span className="text-neutral-400">=</span>{' '}
+                  <span className="text-[#FF00EE]">this</span>
+                  <span className="text-neutral-400">.</span>
+                  <span className="text-[#009DFF]">combine</span>
+                  <span className="text-neutral-400">(</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'      '}
+                  <span className="text-[#FF00EE]">this</span>
+                  <span className="text-neutral-400">.</span>
+                  <span className="text-[#009DFF]">crossDomain</span>
+                  <span className="text-neutral-400">,</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'      '}
+                  <span className="text-[#FF00EE]">this</span>
+                  <span className="text-neutral-400">.</span>
+                  <span className="text-[#009DFF]">reasoning</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'    '}
+                  <span className="text-neutral-400">);</span>
+                </div>
+                <div className="text-neutral-500">
+                  {'  '}
+                  <span className="text-neutral-400">{'}'}</span>
+                </div>
+                <div className="text-neutral-400">{'}'}</div>
+              </div>
             </div>
           </FadeIn>
         </div>
@@ -250,7 +427,7 @@ function ProcessSteps() {
 
 export const metadata: Metadata = {
   description:
-    'Vectorama - AI-powered designsystem automatisering. Generer merkevarekonistente ikoner, illustrasjoner og designelementer p&aring; tvers av alle plattformer.',
+    'AIAKAKI - AI-powered design system automation. Generate brand-consistent icons, illustrations and design elements across all platforms.',
 }
 
 export default async function Home() {
@@ -267,7 +444,7 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Telenor', logo: logoPhobiaDark }}
       >
-        <div>Hva er Automateket, og hvorfor trenger du det?</div>
+        <div>What is AIAKAKI, and why do you need it?</div>
       </SectionPattern>
 
       <ProcessSteps />
@@ -278,10 +455,9 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Telenor', logo: logoPhobiaDark }}
       >
-        Vectorama har transformert v&aring;r designprosess. Vi kan n&aring;
-        produsere konsistente, merkevareriktige designelementer p&aring; en
-        br&oslash;kdel av tiden det tok tidligere, alt fra app-ikoner til
-        presentasjonsgrafikk.
+        AIAKAKI has transformed our design process. We can now produce
+        consistent, brand-appropriate design elements in a fraction of the time
+        it took previously, everything from app icons to presentation graphics.
       </Testimonial>
 
       <Services />

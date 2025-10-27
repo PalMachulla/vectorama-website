@@ -24,10 +24,11 @@ export function TagListItem({
   return (
     <li
       className={clsx(
-        'rounded-full bg-neutral-100 px-4 py-1.5 text-base text-neutral-600',
+        'rounded border border-[#009DFF]/30 bg-neutral-900/50 px-3 py-1.5 font-mono text-sm text-neutral-400',
         className,
       )}
     >
+      <span className="text-[#BBFFA8]">{'- '}</span>
       {children}
     </li>
   )

@@ -17,29 +17,29 @@ const maskShape = {
 
 const slides = [
   {
-    id: 'vectorama',
-    title: 'Vectorama',
+    id: 'aiakaki',
+    title: 'AIAKAKI',
     description:
-      'Automatiser designproduksjon med AI. Generer merkevarekonistente ikoner, illustrasjoner og designelementer i vektorformat - fra apper og nettsider til powerpoint og trykte flater.',
-    ctaText: 'Utforsk Vectorama',
+      'Automate design production with AI. Generate brand-consistent icons, illustrations and design elements in vector format - from apps and websites to PowerPoint and printed materials.',
+    ctaText: 'Explore AIAKAKI',
     ctaHref: '/contact',
     backgroundImage: imagePopculture,
   },
   {
     id: 'pictogram',
-    title: 'Piktogrammer',
+    title: 'Pictograms',
     description:
-      'Ut i fra et stamsett med ikoner, kan vi utvide ikonhierarkiet med flere nivåer. Fra simple ikoner til komplekse piktogrammer helt i tråd mer designsystemet deres.',
-    ctaText: 'Utforsk Vectorama',
+      'From a base set of icons, we can expand the icon hierarchy with multiple levels. From simple icons to complex pictograms fully aligned with your design system.',
+    ctaText: 'Explore AIAKAKI',
     ctaHref: '/contact',
     backgroundImage: imageRabbit,
   },
   {
     id: 'illustration',
-    title: 'Illustrasjoner',
+    title: 'Illustrations',
     description:
-      'Selv rike, vektoriserte illustrasjoner kommer ut i deres stil. Enten klare til bruk, eller til redigering for en siste touch av en illustratør eller designer.',
-    ctaText: 'Utforsk Vectorama',
+      'Even rich, vectorized illustrations come out in your style. Either ready to use, or for editing with a final touch from an illustrator or designer.',
+    ctaText: 'Explore AIAKAKI',
     ctaHref: '/contact',
     backgroundImage: imageCreative,
   },
@@ -125,42 +125,45 @@ export function HeroCarousel() {
             <div className="relative flex min-h-[400px] items-center py-12 sm:min-h-[450px] sm:py-16">
               {/* Text Content */}
               <div className="relative z-10 lg:w-1/2">
-                {/* Fixed Vectorama label */}
+                {/* Fixed AIAKAKI label with terminal-like styling */}
                 <div className="mb-4">
                   <span
-                    className={`inline-flex items-center rounded-tr-xl rounded-bl-xl px-3 py-1 text-sm font-medium ${
+                    className={`inline-flex items-center rounded-tr-xl rounded-bl-xl border px-3 py-1 font-mono text-xs font-semibold tracking-wider uppercase ${
                       hasBackground
-                        ? 'bg-neutral-950/10 text-neutral-950'
-                        : 'bg-neutral-200 text-neutral-700'
+                        ? 'border-[#009DFF] bg-black text-[#009DFF]'
+                        : 'border-[#009DFF] bg-black text-[#009DFF]'
                     }`}
                   >
-                    Nyhet: Vectorama
+                    <span className="mr-2 text-[#BBFFA8]">$</span> new: aiakaki
                   </span>
                 </div>
                 <h1
                   className={`font-display text-5xl font-medium tracking-tight text-balance sm:text-7xl ${
-                    hasBackground ? 'text-neutral-950' : 'text-neutral-950'
+                    hasBackground ? 'text-white' : 'text-white'
                   }`}
                 >
                   {currentSlide.title}
                 </h1>
                 <p
-                  className={`mt-6 text-xl ${
-                    hasBackground ? 'text-neutral-700' : 'text-neutral-600'
+                  className={`mt-6 font-mono text-base leading-relaxed ${
+                    hasBackground ? 'text-neutral-300' : 'text-neutral-400'
                   }`}
                 >
+                  <span className="text-[#009DFF]">{'// '}</span>
                   {currentSlide.description}
                 </p>
                 <div className="mt-8">
                   <Link
                     href={currentSlide.ctaHref}
-                    className={`inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium transition-colors ${
+                    className={`group relative inline-flex items-center justify-center rounded-lg border px-6 py-3 font-mono text-sm font-semibold tracking-wider uppercase transition-all before:absolute before:inset-0 before:rounded-lg before:border before:transition-all after:absolute after:inset-0 after:rounded-lg after:border after:transition-all ${
                       hasBackground
-                        ? 'bg-neutral-950 text-white hover:bg-neutral-800'
-                        : 'bg-neutral-950 text-white hover:bg-neutral-800'
+                        ? 'border-[#BBFFA8]/60 bg-black text-[#BBFFA8] before:-translate-x-1 before:-translate-y-1 before:border-[#FF00EE]/50 after:translate-x-1 after:translate-y-1 after:border-[#009DFF]/40 hover:bg-neutral-950 hover:before:-translate-x-1.5 hover:before:-translate-y-1.5 hover:after:translate-x-1.5 hover:after:translate-y-1.5'
+                        : 'border-[#BBFFA8]/60 bg-black text-[#BBFFA8] before:-translate-x-1 before:-translate-y-1 before:border-[#FF00EE]/50 after:translate-x-1 after:translate-y-1 after:border-[#009DFF]/40 hover:bg-neutral-950 hover:before:-translate-x-1.5 hover:before:-translate-y-1.5 hover:after:translate-x-1.5 hover:after:translate-y-1.5'
                     }`}
                   >
-                    {currentSlide.ctaText}
+                    <span className="relative z-10">
+                      {currentSlide.ctaText}
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -183,7 +186,7 @@ export function HeroCarousel() {
           >
             <svg
               viewBox={`0 0 ${maskShape.width} ${maskShape.height}`}
-              className="h-[500px] w-auto"
+              className="h-[600px] w-auto"
             >
               <defs>
                 <clipPath id={`${maskId}-clip`}>
@@ -234,11 +237,11 @@ export function HeroCarousel() {
             className={`h-2 rounded-full transition-all ${
               index === currentIndex
                 ? hasBackground
-                  ? 'w-8 bg-neutral-950'
-                  : 'w-8 bg-neutral-950'
+                  ? 'w-8 bg-[#009DFF]'
+                  : 'w-8 bg-[#009DFF]'
                 : hasBackground
-                  ? 'w-2 bg-neutral-950/40 hover:bg-neutral-950/60'
-                  : 'w-2 bg-neutral-300 hover:bg-neutral-400'
+                  ? 'w-2 bg-[#009DFF]/40 hover:bg-[#009DFF]/60'
+                  : 'w-2 bg-neutral-600 hover:bg-neutral-500'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

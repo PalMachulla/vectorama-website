@@ -40,10 +40,10 @@ function Section({
         <div className="mt-12 lg:mt-0 lg:w-148 lg:flex-none lg:group-even/section:order-first">
           <FadeIn>
             <div
-              className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
+              className="font-display text-base font-semibold before:text-neutral-600 before:content-['/_'] after:text-white after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
             />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
               {title}
             </h2>
             <div className="mt-6">{children}</div>
@@ -56,83 +56,76 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="Oppdage" image={{ src: imageWhiteboard }}>
-      <div className="space-y-6 text-base text-neutral-600">
+    <Section title="Discover" image={{ src: imageWhiteboard }}>
+      <div className="space-y-6 font-mono text-base leading-relaxed text-neutral-400">
         <p>
-          Vi jobber tett med kundene v&aring;re for &aring; forst&aring; deres{' '}
-          <strong className="font-semibold text-neutral-950">behov</strong> og
-          m&aring;l. Vi g&aring;r inn i den daglige driften for &aring; avdekke
-          hva som faktisk driver virksomheten fremover.
+          We work closely with our clients to understand their{' '}
+          <strong className="font-semibold text-[#009DFF]">needs</strong> and
+          goals. We dive into daily operations to uncover what actually drives
+          the business forward.
         </p>
         <p>
-          V&aring;rt team av privatetterforskere skygger selskapets
-          direkt&oslash;rer i flere uker, mens v&aring;e kundeansvarlige
-          fokuserer p&aring; grundig gjennomgang av s&oslash;ppelet deres slik
-          at vi f&aring;r god dybdeforst&aring;else av deres{' '}
-          <strong className="font-semibold text-neutral-950">
-            verdikjeder
-          </strong>{' '}
+          Our team of private investigators shadows the company&apos;s directors
+          for several weeks, while our account managers focus on thorough review
+          of their garbage to get a deep understanding of their{' '}
+          <strong className="font-semibold text-[#009DFF]">value chains</strong>
           .
         </p>
         <p>
-          Neida. Men Vi &oslash;nsker &aring; sitte tett med dere for &aring;
-          kartlegge hvor modne dere er innenfor KI, og hvordan vi kan bidra med
-          v&aring;r kompetanse p&aring; best mulig m&aring;te. Gjennom dialog og
-          analyse identifiserer vi mulighetsomr&aring;der og utarbeider en
-          skreddersydd tiln&aelig;rmingsplan.
+          Just kidding. But we do want to sit close with you to map out your AI
+          maturity level and how we can best contribute with our expertise.
+          Through dialogue and analysis, we identify opportunity areas and
+          develop a tailored approach plan.
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Inkludert i denne fasen
+      <h3 className="mt-12 font-mono text-base font-semibold text-white">
+        <span className="text-[#FF00EE]">{'const '}</span>
+        <span className="text-[#009DFF]">includedInPhase</span>
+        <span className="text-neutral-400">{' = ['}</span>
       </h3>
       <TagList className="mt-4">
-        <TagListItem>
-          Dyptg&aring;ende sp&oslash;rreunders&oslash;kelser
-        </TagListItem>
-        <TagListItem>Mulighets- og gjennomf&oslash;rbarhetsstudier</TagListItem>
-        <TagListItem>Medarbeiderunders&oslash;kelser</TagListItem>
-        <TagListItem>Konseptbevis (PoC)</TagListItem>
-        <TagListItem>Modenhetsanalyse innenfor KI</TagListItem>
-        <TagListItem>&Oslash;vrig konsultasjon</TagListItem>
+        <TagListItem>In-depth questionnaires</TagListItem>
+        <TagListItem>Opportunity and feasibility studies</TagListItem>
+        <TagListItem>Employee surveys</TagListItem>
+        <TagListItem>Proof of concept (PoC)</TagListItem>
+        <TagListItem>AI maturity analysis</TagListItem>
+        <TagListItem>Other consultation</TagListItem>
       </TagList>
+      <div className="mt-2 font-mono text-neutral-400">{'];'}</div>
     </Section>
   )
 }
 
 function Build() {
   return (
-    <Section title="Bygge" image={{ src: imageLaptop, shape: 1 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+      <div className="space-y-6 font-mono text-base leading-relaxed text-neutral-400">
         <p>
-          Basert p&aring; oppdagelsefasen utvikler vi en omfattende{' '}
-          <strong className="font-semibold text-neutral-950">
-            kj&oslash;replan
-          </strong>{' '}
-          for prosjektet og starter arbeidet mot leveranse. Vi velger de beste
-          KI-modellene og teknologiene som passer deres spesifikke behov.
+          Based on the discovery phase, we develop a comprehensive{' '}
+          <strong className="font-semibold text-[#009DFF]">roadmap</strong> for
+          the project and begin work towards delivery. We select the best AI
+          models and technologies that fit your specific needs.
         </p>
         <p>
-          Hver kunde f&aring;r tildelt en dedikert prosjektleder som holder
-          kommunikasjonslinjene &aring;pne og sikrer at prosjektet holder
-          kursen. De fungerer som et bindeledd mellom deres team og v&aring;re
-          KI-spesialister som jobber med &aring; utvikle skreddersydde
-          l&oslash;sninger.
+          Each client is assigned a dedicated project manager who keeps
+          communication lines open and ensures the project stays on track. They
+          serve as a liaison between your team and our AI specialists who work
+          to develop tailored solutions.
         </p>
         <p>
-          Vi jobber iterativt med regelmessige oppdateringer og demonstrasjoner,
-          slik at dere hele tiden er involvert i utviklingen. Dette sikrer at
-          sluttresultatet matcher forventningene og leverer reell verdi til
-          deres virksomhet.
+          We work iteratively with regular updates and demonstrations, so you
+          are always involved in the development. This ensures that the end
+          result matches expectations and delivers real value to your business.
         </p>
       </div>
 
       <Blockquote
-        author={{ name: 'Thomas Hansen', role: 'CTO hos TechCorp' }}
+        author={{ name: 'Thomas Hansen', role: 'CTO at TechCorp' }}
         className="mt-12"
       >
-        Teamet holdt oss oppdatert gjennom hele prosessen. Vi f&oslash;lte oss
-        trygge p&aring; at prosjektet var i gode hender.
+        The team kept us updated throughout the process. We felt confident that
+        the project was in good hands.
       </Blockquote>
     </Section>
   )
@@ -140,57 +133,57 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Levere" image={{ src: imageMeeting, shape: 2 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+      <div className="space-y-6 font-mono text-base leading-relaxed text-neutral-400">
         <p>
-          N&aring;r l&oslash;sningen er klar, gjennomf&oslash;rer vi grundig{' '}
-          <strong className="font-semibold text-neutral-950">
-            testing og validering
+          When the solution is ready, we conduct thorough{' '}
+          <strong className="font-semibold text-[#009DFF]">
+            testing and validation
           </strong>{' '}
-          for &aring; sikre at alt fungerer optimalt. Vi setter opp
-          n&oslash;dvendig infrastruktur og s&oslash;rger for at systemene er
-          klare for produksjon.
+          to ensure everything works optimally. We set up necessary
+          infrastructure and ensure systems are ready for production.
         </p>
         <p>
-          Implementeringen skjer p&aring; en kontrollert m&aring;te, ofte i{' '}
-          <strong className="font-semibold text-neutral-950">faser</strong> for
-          &aring; minimere risiko. Vi overv&aring;ker n&oslash;ye ytelsen og
-          justerer underveis for &aring; sikre best mulig{' '}
-          <strong className="font-semibold text-neutral-950">resultat</strong>.
+          Implementation happens in a controlled manner, often in{' '}
+          <strong className="font-semibold text-[#009DFF]">phases</strong> to
+          minimize risk. We closely monitor performance and adjust along the way
+          to ensure the best possible{' '}
+          <strong className="font-semibold text-[#009DFF]">results</strong>.
         </p>
         <p>
-          Vi s&oslash;rger for at alle n&oslash;kkelkomponenter er{' '}
-          <strong className="font-semibold text-neutral-950">
-            fullt funksjonelle
+          We ensure all key components are{' '}
+          <strong className="font-semibold text-[#009DFF]">
+            fully functional
           </strong>{' '}
-          ved lansering. I tillegg gir vi oppl&aelig;ring til deres team slik at
-          de kan ta i bruk l&oslash;sningen effektivt, med v&aring;r{' '}
-          <strong className="font-semibold text-neutral-950">
-            st&oslash;tte
-          </strong>{' '}
-          tilgjengelig for videre optimalisering.
+          at launch. In addition, we provide training to your team so they can
+          use the solution effectively, with our{' '}
+          <strong className="font-semibold text-[#009DFF]">support</strong>{' '}
+          available for further optimization.
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Inkludert i denne fasen
+      <h3 className="mt-12 font-mono text-base font-semibold text-white">
+        <span className="text-[#FF00EE]">{'const '}</span>
+        <span className="text-[#009DFF]">includedInPhase</span>
+        <span className="text-neutral-400">{' = {'}</span>
       </h3>
       <List className="mt-8">
         <ListItem title="Testing">
-          Grundig testing av alle komponenter for &aring; sikre kvalitet og
-          p&aring;litelighet. Vi validerer at KI-modellene presterer som
-          forventet i reelle scenarioer.
+          Thorough testing of all components to ensure quality and reliability.
+          We validate that AI models perform as expected in real-world
+          scenarios.
         </ListItem>
-        <ListItem title="Infrastruktur">
-          Vi setter opp robust infrastruktur tilpasset deres behov, enten det er
-          sky-baserte l&oslash;sninger eller on-premise systemer.
+        <ListItem title="Infrastructure">
+          We set up robust infrastructure tailored to your needs, whether
+          it&apos;s cloud-based solutions or on-premise systems.
         </ListItem>
-        <ListItem title="St&oslash;tte">
-          Kontinuerlig st&oslash;tte og vedlikehold sikrer at l&oslash;sningen
-          fortsetter &aring; levere verdi over tid. Vi hjelper med oppdateringer
-          og forbedringer etter hvert som deres behov utvikler seg.
+        <ListItem title="Support">
+          Continuous support and maintenance ensures the solution continues to
+          deliver value over time. We help with updates and improvements as your
+          needs evolve.
         </ListItem>
       </List>
+      <div className="mt-2 font-mono text-neutral-400">{'};'}</div>
     </Section>
   )
 }
@@ -198,58 +191,57 @@ function Deliver() {
 function Values() {
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-linear-to-b from-neutral-50">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-linear-to-b from-[#2d0a29] via-neutral-950 to-black">
         <GridPattern
-          className="absolute inset-0 h-full w-full mask-[linear-gradient(to_bottom_left,white_40%,transparent_50%)] fill-neutral-100 stroke-neutral-950/5"
+          className="absolute inset-0 h-full w-full"
           yOffset={-270}
+          interactive
         />
       </div>
 
       <SectionIntro
-        eyebrow="V&aring;re verdier"
-        title="Balansere p&aring;litelighet og innovasjon"
+        eyebrow="Our values"
+        title="Balancing reliability and innovation"
+        invert
       >
         <p>
-          Vi streber etter &aring; v&aelig;re i forkant av nye trender og
-          teknologier innen KI og automatisering. Vi kombinerer kjente metoder
-          med nytenkning for &aring; levere l&oslash;sninger som b&aring;de er
-          robuste og nyskapende. V&aring;re kjerneverdier styrer alle v&aring;re
-          beslutninger.
+          We strive to be at the forefront of new trends and technologies in AI
+          and automation. We combine proven methods with innovation to deliver
+          solutions that are both robust and groundbreaking. Our core values
+          guide all our decisions.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="N&oslash;yaktig">
-            Vi er detaljorienterte i v&aring;r tiln&aelig;rming til
-            KI-utvikling. Hver l&oslash;sning tilpasses n&oslash;ye deres
-            merkevare og behov, fra fargepalett til designprinsipper.
+          <GridListItem title="Precise" invert>
+            We are detail-oriented in our approach to AI development. Each
+            solution is carefully tailored to your brand and needs, from color
+            palette to design principles.
           </GridListItem>
-          <GridListItem title="Effektiv">
-            Vi er stolte av &aring; levere i tide ved &aring; bruke smarte
-            verkt&oslash;y og metodikk. Erfaring gj&oslash;r oss i stand til
-            &aring; jobbe raskt uten &aring; g&aring; p&aring; kompromiss med
-            kvalitet.
+          <GridListItem title="Efficient" invert>
+            We pride ourselves on delivering on time by using smart tools and
+            methodology. Experience enables us to work quickly without
+            compromising on quality.
           </GridListItem>
-          <GridListItem title="Tilpasningsdyktig">
-            Hver virksomhet har unike behov, og v&aring;r st&oslash;rste styrke
-            er evnen til &aring; skreddерsy l&oslash;sninger som passer perfekt
-            til deres spesifikke situasjon.
+          <GridListItem title="Adaptable" invert>
+            Every business has unique needs, and our greatest strength is the
+            ability to tailor solutions that fit perfectly to your specific
+            situation.
           </GridListItem>
-          <GridListItem title="&Aring;pen">
-            Vi er transparente om v&aring;re prosesser og kommuniserer klart
-            gjennom hele prosjektet. Dere vil alltid vite hvor vi st&aring;r og
-            hva som skjer.
+          <GridListItem title="Open" invert>
+            We are transparent about our processes and communicate clearly
+            throughout the project. You will always know where we stand and what
+            is happening.
           </GridListItem>
-          <GridListItem title="Lojal">
-            Vi bygger langsiktige relasjoner med v&aring;re kunder som g&aring;r
-            utover bare &aring; levere et produkt. Vi er her for &aring;
-            st&oslash;tte dere p&aring; lang sikt.
+          <GridListItem title="Loyal" invert>
+            We build long-term relationships with our clients that go beyond
+            just delivering a product. We are here to support you in the long
+            term.
           </GridListItem>
-          <GridListItem title="Innovativ">
-            Det teknologiske landskapet utvikler seg konstant, og det
-            gj&oslash;r vi ogs&aring;. Vi holder oss oppdatert p&aring; de
-            nyeste fremskrittene innen KI og automatisering.
+          <GridListItem title="Innovative" invert>
+            The technological landscape is constantly evolving, and so are we.
+            We stay updated on the latest advances in AI and automation.
           </GridListItem>
         </GridList>
       </Container>
@@ -258,20 +250,19 @@ function Values() {
 }
 
 export const metadata: Metadata = {
-  title: 'V&aring;r prosess',
+  title: 'Our Process',
   description:
-    'Vi tror p&aring; effektivitet og &aring; maksimere v&aring;re ressurser for &aring; gi best mulig verdi til v&aring;re kunder.',
+    'We believe in efficiency and maximizing our resources to provide the best possible value to our clients.',
 }
 
 export default function Process() {
   return (
     <RootLayout>
-      <PageIntro eyebrow="V&aring;r prosess" title="Hvordan vi jobber">
+      <PageIntro eyebrow="Our process" title="How we work">
         <p>
-          Vi tror p&aring; effektivitet og &aring; maksimere v&aring;re
-          ressurser for &aring; gi best mulig verdi til v&aring;re kunder. Vi
-          kombinerer kjent metodikk med skreddersydde KI-l&oslash;sninger
-          tilpasset kundenes unike behov.
+          We believe in efficiency and maximizing our resources to provide the
+          best possible value to our clients. We combine proven methodology with
+          tailored AI solutions adapted to our customers&apos; unique needs.
         </p>
       </PageIntro>
 

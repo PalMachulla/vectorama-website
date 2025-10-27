@@ -38,34 +38,43 @@ export default async function Blog() {
                 <Border className="pt-16">
                   <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                     <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
-                      <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                        <Link href={article.href}>{article.title}</Link>
+                      <h2 className="font-display text-2xl font-semibold text-white">
+                        <Link
+                          href={article.href}
+                          className="transition-colors hover:text-[#009DFF]"
+                        >
+                          {article.title}
+                        </Link>
                       </h2>
                       <dl className="lg:absolute lg:top-0 lg:left-0 lg:w-1/3 lg:px-4">
                         <dt className="sr-only">Published</dt>
-                        <dd className="absolute top-0 left-0 text-sm text-neutral-950 lg:static">
+                        <dd className="absolute top-0 left-0 font-mono text-sm text-[#009DFF] lg:static">
+                          <span className="text-[#BBFFA8]">{'> '}</span>
                           <time dateTime={article.date}>
                             {formatDate(article.date)}
                           </time>
                         </dd>
                         <dt className="sr-only">Author</dt>
                         <dd className="mt-6 flex gap-x-4">
-                          <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
+                          <div className="flex-none overflow-hidden rounded-xl border border-[#009DFF]/30 bg-neutral-900">
                             <Image
                               alt=""
                               {...article.author.image}
-                              className="h-12 w-12 object-cover grayscale"
+                              className="h-20 w-20 object-cover grayscale"
                             />
                           </div>
-                          <div className="text-sm text-neutral-950">
-                            <div className="font-semibold">
+                          <div className="font-mono text-sm text-neutral-300">
+                            <div className="font-semibold text-white">
+                              <span className="text-[#FF00EE]">{'// '}</span>
                               {article.author.name}
                             </div>
-                            <div>{article.author.role}</div>
+                            <div className="mt-1 text-[#009DFF]">
+                              {article.author.role}
+                            </div>
                           </div>
                         </dd>
                       </dl>
-                      <p className="mt-6 max-w-2xl text-base text-neutral-600">
+                      <p className="mt-6 max-w-2xl font-mono text-base leading-relaxed text-neutral-400">
                         {article.description}
                       </p>
                       <Button

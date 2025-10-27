@@ -15,8 +15,65 @@ function Block({
     <motion.path
       transform={`translate(${-32 * y + 96 * x} ${160 * y})`}
       d="M45.119 4.5a11.5 11.5 0 0 0-11.277 9.245l-25.6 128C6.82 148.861 12.262 155.5 19.52 155.5h63.366a11.5 11.5 0 0 0 11.277-9.245l25.6-128c1.423-7.116-4.02-13.755-11.277-13.755H45.119Z"
+      fill="none"
+      stroke="#BBFFA8"
+      strokeWidth="1"
+      strokeOpacity="0.15"
       {...props}
     />
+  )
+}
+
+function GlitchBlock({
+  x,
+  y,
+  ...props
+}: Omit<React.ComponentPropsWithoutRef<typeof motion.g>, 'x' | 'y'> & {
+  x: number
+  y: number
+}) {
+  const pathD =
+    'M45.119 4.5a11.5 11.5 0 0 0-11.277 9.245l-25.6 128C6.82 148.861 12.262 155.5 19.52 155.5h63.366a11.5 11.5 0 0 0 11.277-9.245l25.6-128c1.423-7.116-4.02-13.755-11.277-13.755H45.119Z'
+  const baseX = -32 * y + 96 * x
+  const baseY = 160 * y
+
+  return (
+    <motion.g>
+      {/* Pink offset border */}
+      <motion.path
+        d={pathD}
+        fill="none"
+        stroke="#FF00EE"
+        strokeWidth="1"
+        transform={`translate(${baseX - 2} ${baseY - 2})`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 0.25, 0] }}
+        transition={{ duration: 0.4, times: [0, 0.5, 1] }}
+      />
+      {/* Blue offset border */}
+      <motion.path
+        d={pathD}
+        fill="none"
+        stroke="#009DFF"
+        strokeWidth="1"
+        transform={`translate(${baseX + 2} ${baseY + 2})`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 0.25, 0] }}
+        transition={{ duration: 0.4, times: [0, 0.5, 1] }}
+      />
+      {/* Green main border - slight brightening */}
+      <motion.path
+        d={pathD}
+        fill="none"
+        stroke="#BBFFA8"
+        strokeWidth="1"
+        transform={`translate(${baseX} ${baseY})`}
+        initial={{ opacity: 0.15 }}
+        animate={{ opacity: [0.15, 0.35, 0.15] }}
+        transition={{ duration: 0.4, times: [0, 0.5, 1] }}
+        {...props}
+      />
+    </motion.g>
   )
 }
 
@@ -35,14 +92,13 @@ export function GridPattern({
   let [hoveredBlocks, setHoveredBlocks] = useState<
     Array<[x: number, y: number, key: number]>
   >([])
-  let staticBlocks = [
-    [1, 1],
-    [2, 2],
-    [4, 3],
-    [6, 2],
-    [7, 4],
-    [5, 5],
-  ]
+  // Generate a full grid of visible blocks
+  let staticBlocks: Array<[number, number]> = []
+  for (let x = -2; x <= 10; x++) {
+    for (let y = 0; y <= 8; y++) {
+      staticBlocks.push([x, y])
+    }
+  }
 
   useEffect(() => {
     if (!interactive) {
@@ -55,29 +111,43 @@ export function GridPattern({
       }
 
       let rect = ref.current.getBoundingClientRect()
-      let x = event.clientX - rect.left
-      let y = event.clientY - rect.top
-      if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
+      let mouseX = event.clientX - rect.left
+      let mouseY = event.clientY - rect.top
+
+      if (
+        mouseX < 0 ||
+        mouseY < 0 ||
+        mouseX > rect.width ||
+        mouseY > rect.height
+      ) {
         return
       }
 
-      x = x - rect.width / 2 - 32
-      y = y - yOffset
-      x += Math.tan(32 / 160) * y
-      x = Math.floor(x / 96)
-      y = Math.floor(y / 160)
+      // Convert screen coordinates to grid coordinates
+      // Account for the SVG being centered at x="50%"
+      let relativeX = mouseX - rect.width / 2
+      let relativeY = mouseY - yOffset
 
-      if (currentBlock.current?.[0] === x && currentBlock.current?.[1] === y) {
+      // Reverse the skew transformation: screenX = -32*y + 96*x
+      // So: x = (screenX + 32*y) / 96
+      let gridY = Math.floor(relativeY / 160)
+      let gridX = Math.floor((relativeX + 32 * gridY) / 96)
+
+      if (
+        currentBlock.current?.[0] === gridX &&
+        currentBlock.current?.[1] === gridY
+      ) {
         return
       }
 
-      currentBlock.current = [x, y]
+      currentBlock.current = [gridX, gridY]
 
       setHoveredBlocks((blocks) => {
         let key = counter.current++
-        let block = [x, y, key] as (typeof hoveredBlocks)[number]
+        let block = [gridX, gridY, key] as (typeof hoveredBlocks)[number]
         return [...blocks, block].filter(
-          (block) => !(block[0] === x && block[1] === y && block[2] !== key),
+          (block) =>
+            !(block[0] === gridX && block[1] === gridY && block[2] !== key),
         )
       })
     }
@@ -97,12 +167,10 @@ export function GridPattern({
           <Block key={`${block}`} x={block[0]} y={block[1]} />
         ))}
         {hoveredBlocks.map((block) => (
-          <Block
+          <GlitchBlock
             key={block[2]}
             x={block[0]}
             y={block[1]}
-            animate={{ opacity: [0, 1, 0] }}
-            transition={{ duration: 1, times: [0, 0, 1] }}
             onAnimationComplete={() => {
               setHoveredBlocks((blocks) =>
                 blocks.filter((b) => b[2] !== block[2]),

@@ -32,17 +32,17 @@ export function Offices({
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Oslo" invert={invert}>
-          Kristian Augustsgate 23
+        <Office name="Norway" invert={invert}>
+          Feierbakken 1
           <br />
-          0164 Oslo, Norge
+          1555 Son, Norway
         </Office>
       </li>
       <li>
-        <Office name="Automateket HQ" invert={invert}>
-          Powered by Dentsu
+        <Office name="AIAKAKI HQ" invert={invert}>
+          Powered by AIAKAKI
           <br />
-          KI-drevet design innovasjon
+          Agentic first Innovation & Imagination
         </Office>
       </li>
     </ul>

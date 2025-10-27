@@ -23,14 +23,14 @@ interface Illustration {
 
 // Configuration data
 const sectionConfig = {
-  label: 'Smertelindring',
+  label: 'Engineering Intelligence',
   description:
-    'Vel, du trenger det først og fremst fordi du føler du må komme i gang med KI. Og samtidig føler du det er vanskelig å skille signalet i fra støyen. Du føler simpelthen du trenger å komme i kontakt med noen som kan veilede deg på en god måte, slik at du får den beste løsningen for deg og ditt selskap. Under er det noen områder du kan se litt nærmere på.',
+    'Well, you need it first and foremost because you feel you need to get started with AI. And at the same time, you find it difficult to separate the signal from the noise. You simply feel you need to get in touch with someone who can guide you in a good way, so you get the best solution for you and your company. Below are some areas you can take a closer look at.',
   illustrations: [
     {
       id: 'illustration-1',
       title: 'Illustration 1',
-      caption: 'Alt om GEO (KI-Søk)',
+      caption: 'GEO (AI Search)',
       placeholder: 'Illustration 1',
       image: illustration1,
       bgColor: 'bg-pink-100',
@@ -38,7 +38,7 @@ const sectionConfig = {
     {
       id: 'illustration-2',
       title: 'Illustration 2',
-      caption: 'Visuell Kommunikasjon',
+      caption: 'Visual Communication',
       placeholder: 'Illustration 2',
       image: illustration2,
       bgColor: 'bg-blue-100',
@@ -46,7 +46,7 @@ const sectionConfig = {
     {
       id: 'illustration-3',
       title: 'Illustration 3',
-      caption: 'KI Strategi',
+      caption: 'AI Strategy',
       placeholder: 'Illustration 3',
       image: illustration3,
       bgColor: 'bg-green-100',
@@ -54,7 +54,7 @@ const sectionConfig = {
     {
       id: 'illustration-4',
       title: 'Illustration 4',
-      caption: 'Agentsystemer',
+      caption: 'Agent Systems',
       placeholder: 'Illustration 4',
       image: illustration4,
       bgColor: 'bg-purple-100',
@@ -62,7 +62,7 @@ const sectionConfig = {
     {
       id: 'illustration-5',
       title: 'Illustration 5',
-      caption: 'Generell Automasjon',
+      caption: 'General Automation',
       placeholder: 'Illustration 5',
       image: illustration5,
       bgColor: 'bg-yellow-100',
@@ -94,7 +94,8 @@ function IllustrationCard({ illustration }: { illustration: Illustration }) {
             <span className="text-neutral-400">{illustration.placeholder}</span>
           )}
         </div>
-        <figcaption className="text-sm text-neutral-600">
+        <figcaption className="font-mono text-xs tracking-wider text-neutral-400 uppercase">
+          <span className="text-[#009DFF]">{'> '}</span>
           {illustration.caption}
         </figcaption>
       </figure>
@@ -115,12 +116,12 @@ export function SectionPattern({
   return (
     <div
       className={clsx(
-        'relative isolate bg-neutral-50 py-16 sm:py-28 md:py-32',
+        'relative isolate border-y border-[#009DFF]/10 bg-neutral-900 py-16 sm:py-28 md:py-32',
         className,
       )}
     >
       <GridPattern
-        className="absolute inset-0 h-full w-full [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_70%)] fill-neutral-100 stroke-neutral-950/5"
+        className="absolute inset-0 h-full w-full [mask-image:linear-gradient(to_bottom_left,black_40%,transparent_70%)] fill-neutral-800 stroke-[#009DFF]/10"
         yOffset={-96}
       />
       <Container>

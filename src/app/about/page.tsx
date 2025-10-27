@@ -25,35 +25,34 @@ import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 import { loadArticles } from '@/lib/mdx'
 import { RootLayout } from '@/components/RootLayout'
 
-function VectoramaValues() {
+function AIAKAKIValues() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
-        eyebrow="Våre verdier"
-        title="Teknologi møter designekspertise"
+        eyebrow="Our values"
+        title="Technology meets design expertise"
         invert
       >
         <p>
-          Vi kombinerer avansert AI-teknologi med dypgående forståelse av
-          merkevareidentitet og designprinsipper for å skape løsninger som
-          transformerer designprosesser.
+          We combine advanced AI technology with deep understanding of brand
+          identity and design principles to create solutions that transform
+          design processes.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Innovasjon" invert>
-            Vi utforsker kontinuerlig nye muligheter innen AI og maskinlæring
-            for å forbedre designautomatisering og merkevarebygging på tvers av
-            alle medier.
+          <GridListItem title="Innovation" invert>
+            We continuously explore new possibilities in AI and machine learning
+            to improve design automation and brand building across all media.
           </GridListItem>
-          <GridListItem title="Merkevareintegritet" invert>
-            Hvert designelement vi genererer respekterer og forsterker din
-            merkevareidentitet, og sikrer konsistens fra app-ikoner til
-            presentasjonsgrafikk.
+          <GridListItem title="Brand integrity" invert>
+            Every design element we generate respects and reinforces your brand
+            identity, ensuring consistency from app icons to presentation
+            graphics.
           </GridListItem>
-          <GridListItem title="Kvalitet" invert>
-            Våre AI-modeller er trent til å produsere design i verdensklasse,
-            med ekspertvalidering som sikrer perfektion i hvert element.
+          <GridListItem title="Quality" invert>
+            Our AI models are trained to produce world-class design, with expert
+            validation ensuring perfection in every element.
           </GridListItem>
         </GridList>
       </Container>
@@ -63,74 +62,73 @@ function VectoramaValues() {
 
 const team = [
   {
-    title: 'Ledelse',
+    title: 'Leadership',
     people: [
       {
-        name: 'Pål Machulla',
+        name: 'Alex Chen',
         role: 'AI Lead / Director of Innovation',
         image: { src: imageLeslieAlexander },
-        description:
-          'Spesialist på AI-løsninger og designsystem-automatisering',
+        description: 'Specialist in AI solutions and design system automation',
       },
       {
-        name: 'Benedicte Kjøde',
+        name: 'Sarah Mitchell',
         role: 'Client Director',
         image: { src: imageMichaelFoster },
         description:
-          'Leder kunderelasjoner og sikrer suksessfulle prosjektleveranser',
+          'Leads customer relationships and ensures successful project deliveries',
       },
       {
-        name: 'Thale Håmo',
+        name: 'Marcus Rodriguez',
         role: 'Client Manager',
         image: { src: imageDriesVincent },
         description:
-          '15 års erfaring med komplekse merkevareprosjekter og designautomatisering',
+          '15 years of experience with complex brand projects and design automation',
       },
     ],
   },
   {
-    title: 'Ekspertteam',
+    title: 'Expert Team',
     people: [
       {
-        name: 'Kim Oliver H. Andersson',
+        name: 'Jordan Kim',
         role: 'AI Solutions Architect',
         image: { src: imageChelseaHagon },
         description:
-          'Designer og implementerer AI-løsninger for designautomatisering',
+          'Designs and implements AI solutions for design automation',
       },
       {
-        name: 'Alam Ali',
+        name: 'Taylor Singh',
         role: 'AI SEO Specialist',
         image: { src: imageEmmaDorsey },
         description:
-          'Optimerer merkevaresynlighet med AI-dreven søkemotorstrategi',
+          'Optimizes brand visibility with AI-driven search engine strategy',
       },
       {
-        name: 'Henrik Birkeland',
+        name: 'River Johnson',
         role: 'Media Lead',
         image: { src: imageLeonardKrasner },
-        description: 'Strategisk medieplanlegging og kampanjeoptimalisering',
+        description: 'Strategic media planning and campaign optimization',
       },
       {
-        name: 'Design Lead',
+        name: 'Casey Anderson',
         role: 'Senior AI Designer',
         image: { src: imageBlakeReid },
         description:
-          'Kurerer AI-genererte design og sikrer merkevareriktige resultater',
+          'Curates AI-generated designs and ensures brand-appropriate results',
       },
       {
-        name: 'Vector Specialist',
-        role: 'Designsystem Expert',
+        name: 'Morgan Lee',
+        role: 'Design System Expert',
         image: { src: imageKathrynMurphy },
         description:
-          'Optimaliserer designelementer for perfekt skalerbarhet og kvalitet',
+          'Optimizes design elements for perfect scalability and quality',
       },
       {
-        name: 'Brand Analyst',
-        role: 'Merkevarestrategist',
+        name: 'Avery Park',
+        role: 'Brand Strategist',
         image: { src: imageWhitneyFrancis },
         description:
-          'Analyserer merkevareidentitet og oversetter til AI-parametre',
+          'Analyzes brand identity and translates it into AI parameters',
       },
     ],
   },
@@ -145,7 +143,8 @@ function Team() {
             <Border as={FadeIn} />
             <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                <h2 className="font-display text-2xl font-semibold text-white">
+                  <span className="font-mono text-[#009DFF]">{'$ '}</span>
                   {group.title}
                 </h2>
               </FadeIn>
@@ -157,17 +156,46 @@ function Team() {
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
-                            alt=""
-                            {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
-                              {person.name}
+                        <div className="group relative overflow-hidden rounded-3xl border border-[#009DFF]/30 bg-neutral-900">
+                          <div className="relative">
+                            <Image
+                              alt=""
+                              {...person.image}
+                              className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
+                            />
+                            {/* Glitch effect overlay */}
+                            <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                              <Image
+                                alt=""
+                                {...person.image}
+                                className="absolute inset-0 h-full w-full object-cover mix-blend-screen grayscale"
+                                style={{
+                                  filter: 'blur(0.5px)',
+                                  transform: 'translate(-2px, -2px)',
+                                  clipPath: 'inset(0 0 70% 0)',
+                                }}
+                              />
+                              <Image
+                                alt=""
+                                {...person.image}
+                                className="absolute inset-0 h-full w-full object-cover mix-blend-screen grayscale"
+                                style={{
+                                  filter: 'blur(0.5px) hue-rotate(90deg)',
+                                  transform: 'translate(2px, 2px)',
+                                  clipPath: 'inset(70% 0 0 0)',
+                                }}
+                              />
+                            </div>
+                          </div>
+                          <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black via-black/50 to-black/0 to-40% p-6">
+                            <p className="font-mono text-base/6 font-semibold tracking-wide text-white">
+                              <span className="text-[#FF00EE]">{'const '}</span>
+                              <span className="text-[#009DFF]">
+                                {person.name}
+                              </span>
                             </p>
-                            <p className="mt-2 text-sm text-white">
+                            <p className="mt-2 font-mono text-sm text-[#BBFFA8]">
+                              <span className="text-neutral-500">{'// '}</span>
                               {person.role}
                             </p>
                           </div>
@@ -186,9 +214,9 @@ function Team() {
 }
 
 export const metadata: Metadata = {
-  title: 'Om Oss',
+  title: 'About Us',
   description:
-    'Vectorama kombinerer AI-teknologi med designekspertise for å revolusjonere merkevarebygging og designautomatisering.',
+    'AIAKAKI combines AI technology with design expertise to revolutionize brand building and design automation.',
 }
 
 export default async function About() {
@@ -196,46 +224,46 @@ export default async function About() {
 
   return (
     <RootLayout>
-      <PageIntro eyebrow="Om oss" title="AI-drevet designsystem-automatisering">
+      <PageIntro eyebrow="About us" title="AI-driven design system automation">
         <p>
-          Vi revolusjonerer designbransjen ved å kombinere banebrytende
-          AI-teknologi med dypgående forståelse av merkevareidentitet og visuell
-          kommunikasjon.
+          We revolutionize the design industry by combining groundbreaking AI
+          technology with deep understanding of brand identity and visual
+          communication.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Vectorama ble grunnlagt av et team av designere, teknologer og
-            merkevareeksperter som så behovet for en mer effektiv måte å
-            produsere konsistente, høykvalitets designelementer på. Vi oppdaget
-            at tradisjonelle designprosesser var for tidkrevende og
-            inkonsistente for moderne merkevarer som trengte å skalere raskt på
-            tvers av alle medier.
+            AIAKAKI was founded by a team of designers, technologists and brand
+            experts who saw the need for a more efficient way to produce
+            consistent, high-quality design elements. We discovered that
+            traditional design processes were too time-consuming and
+            inconsistent for modern brands that needed to scale rapidly across
+            all media.
           </p>
           <p>
-            I dag hjelper vi ledende selskaper som Telenor med å automatisere
-            designproduksjon uten å kompromittere på kvalitet eller
-            merkevareintegritet. Vårt AI-system lærer din unike designidentitet
-            og produserer alt fra app-ikoner til presentasjonsgrafikk som føles
-            håndlaget av ditt eget designteam.
+            Today we help leading companies like Telenor automate design
+            production without compromising on quality or brand integrity. Our
+            AI system learns your unique design identity and produces everything
+            from app icons to presentation graphics that feel handcrafted by
+            your own design team.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="10,000+" label="Designelementer generert" />
-          <StatListItem value="85%" label="Reduksjon i designtid" />
-          <StatListItem value="25+" label="Merkevarer transformert" />
+          <StatListItem value="10,000+" label="Design elements generated" />
+          <StatListItem value="85%" label="Reduction in design time" />
+          <StatListItem value="25+" label="Brands transformed" />
         </StatList>
       </Container>
 
-      <VectoramaValues />
+      <AIAKAKIValues />
 
       <Team />
 
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
-        title="Fra bloggen"
-        intro="Vårt erfarne team av AI-eksperter og designere deler innsikter om fremtiden for designautomatisering, merkevarebygging og AI-drevne kreative prosesser."
+        title="From the blog"
+        intro="Our experienced team of AI experts and designers share insights on the future of design automation, brand building and AI-driven creative processes."
         pages={blogArticles}
       />
 
